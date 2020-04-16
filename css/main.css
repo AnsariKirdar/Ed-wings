@@ -1,0 +1,161 @@
+@font-face {
+    font-family: alex;
+    src: url(./fonts/Alex.ttf);
+}
+
+@font-face {
+    font-family: gald;
+    src: url(./fonts/Galdeano-Regular.ttf);
+}
+
+@font-face {
+    font-family: northline;
+    src: url(./fonts/Northline.ttf);
+}
+
+.Northline {
+    font-family: northline;
+}
+
+.alex {
+    font-family: alex;
+}
+
+.gald {
+    font-family: gald;
+}
+
+.slider_container_box .swiper-slide {
+    position: relative;
+    min-height: 75vh !important;
+    max-height: 75vh !important;
+    background-color: rgba(0, 0, 0, .5);
+    background-position: center;
+    background-size: cover;
+}
+
+.index-sidler-h1 {
+    font-family: northline;
+    font-size: 6vw;
+}
+
+.index-sidler-p {
+    width: 37vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.index-sidler-a a {
+    border: 2px solid #fff;
+    color: #fff;
+    font-weight: 700;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+}
+
+.index-sidler-a a:hover {
+    font-weight: 700;
+    color: #fff;
+}
+
+.index-slider-button {
+    color: #fff;
+}
+
+.swiper-button-next {
+    right: 30px;
+}
+
+.swiper-button-prev {
+    left: 30px;
+}
+
+
+/* .slider_container_box .swiper-slide img {
+    position: absolute;
+    z-index: 2;
+    width: ;
+    max-height: 75vh !important;
+    background-color: rgba(0, 0, 0, .5);
+}
+*/
+
+.index-swiper-content {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.login_form .profile {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 300px;
+    background-color: #f10;
+    overflow: hidden;
+}
+
+.login_form h1 {
+    font-family: gald;
+    font-weight: normal;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.login_form label {
+    text-align: left;
+    margin-left: 15px;
+    font-size: 120%;
+    font-family: alex;
+}
+
+.login_form input {
+    padding-left: 25px;
+    font-family: alex;
+    color: #fff;
+    background-color: transparent;
+}
+
+.login_form input:focus {
+    padding-left: 25px;
+    font-family: alex;
+    color: #fff;
+    background-color: transparent;
+}
+
+.login_form input:active {
+    padding-left: 25px;
+    font-family: alex;
+    color: #fff;
+    background-color: transparent;
+}
+
+.login_form .form-control {
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 30px;
+}
+
+.login_form a {
+    color: #fff;
+    margin-left: 15px;
+    font-family: alex;
+    font-size: 80%;
+}
