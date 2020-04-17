@@ -52,7 +52,7 @@
 
     <!-- Nav Bar -->
     <?php include './inc/nav.php'; ?>
-    <!-- Nav Bar -->
+    <!-- top Nav Bar -->
 
     <div clas s="py-5">
         <h1 class="text-danger h1 text-center heading mt-5 mb-4 pt-5">
