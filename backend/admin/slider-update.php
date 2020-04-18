@@ -18,7 +18,11 @@ if ($filename) {
       if ($_FILES['slider']['error']) {
         header('Location: ./slider-control.php?msg=We encountered an error with the file please try again&&msg_class=danger');
       } else {
-        $filename = md5(date('Y-m-d H:i:s:u')) . $filename;
+        $file_ext1 = explode('.', $filename);
+        $file_ext_count1 = count($file_ext1);
+        $cnt1 = $file_ext_count1 - 1;
+        $filename = 'a.' . $file_ext1[$cnt1];
+    
         $move = move_uploaded_file($_FILES['slider']['tmp_name'], '../../img/banner/' . $filename);
         if (!$move) {
           header('Location: ./slider-control.php?msg=We encountered an error with the uploading image please try again&&msg_class=danger');

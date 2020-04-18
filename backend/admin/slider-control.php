@@ -55,8 +55,8 @@
               </div>
               <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
                 <label for=""></label>
-                <button type="submit" name="upload_slider" class="btn btn-success font-weight-bold px-4 rounded-pill">
-                  Upload This Slider
+                <button type="submit" name="upload_slider" class="btn btn-success font-weight-bold px-5 rounded-pill">
+                  Upload in slider
                 </button>
               </div>
             </div>

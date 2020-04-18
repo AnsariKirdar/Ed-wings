@@ -14,6 +14,11 @@ if(!isset($_POST['upload_slider'])){
     $link_text = mysqli_real_escape_string($conn, trim(ucfirst($_POST['link_text'])));
     $c_by = $_SESSION['user'];
     $filename = $_FILES['slider']['name'];
+    $file_ext1 = explode('.', $filename);
+    $file_ext_count1 = count($file_ext1);
+    $cnt1 = $file_ext_count1 - 1;
+    $filename = 'a.' . $file_ext1[$cnt1];
+
     if ($_FILES['slider']['error']) {
       header('Location: ./slider-control.php?msg=We encountered an error with the file please try again&&msg_class=danger');
     } else {

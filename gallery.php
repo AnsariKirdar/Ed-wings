@@ -14,6 +14,8 @@
     .card .card_hover {
       position: absolute;
       background-color: rgba(0, 0, 0, .5);
+      display: none;
+      text-align: center;
       z-index: 2;
       width: 0px;
       height: 0px;
@@ -22,19 +24,14 @@
       transform-origin: -50%;
       border-radius: 50px;
       overflow: hidden;
-      transition: 1s;
       transition-duration: 1s;
-      display: none;
-      text-align: center;
       flex-direction: column;
     }
 
     .card_hover h1,
     .card_hover p,
     .card_hover a {
-      display: none;
-      transition: 1s;
-      transition-delay: 1s;
+      margin-top: -1000px;
     }
 
     .card:hover .card_hover {
@@ -50,7 +47,6 @@
       margin: 0px;
       transform-origin: '';
       border-radius: 12px;
-      transition: 1s;
       padding: 2rem;
       transition-duration: 1s;
       flex-direction: column;
@@ -59,10 +55,9 @@
     .card:hover .card_hover h1,
     .card:hover .card_hover p,
     .card:hover .card_hover a {
-      transition-delay: 1.5s;
-      transition-duration: 1.5s;
-      transition: 1s;
-      display: block;
+      transition-delay: .5s;
+      transition-duration: 1s;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -109,22 +104,33 @@
     </div>
     <hr>
     <div class="card-columns mt-5 border-0">
+      <?php
+      include './dbh/conn.php';
+      $sql = 'SELECT * FROM `gallery` ORDER BY `gallery`.`c_date` DESC';
+      $result = mysqli_query($conn, $sql);
+      while ($row = mysqli_fetch_assoc($result)) {
+        $thumb = trim($row['thumb']);
+        $title = trim($row['title']);
+        $full = trim($row['full_img']);
+        echo '
       <div class="card p-0 border-0 position-relative">
-        <img class="card-img-top" style="border-radius: 12px;" src="./img/Itinerary/photo-1549144511-f099e773c147.jpg" alt="">
+        <img class="card-img-top" style="border-radius: 12px;" src="./img/gallery/thumb/'. $thumb . '" alt="">
         <div class="card_hover d-flex align-items-center">
+        <a href="./img/gallery/full_img/' . $full . '" target="_blank" class="text-decoration-none">
           <h1 class="text-white">
-            Lorem ipsum dolor sit amet.
-          </h1>
-          <p class="my-3 text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatibus atque ducimus quasi maiores cupiditate, facere totam soluta autem quos.
-          </p>
+              ' . $title . '
+              </h1>
+              </a>
           <p class="text-center">
-            <a href="./img/Itinerary/photo-1549144511-f099e773c147.jpg" target="_blank" class="btn btn-outline-light px-5 font-weight-bold">
+            <a href="./img/gallery/full_img/' . $full . '" target="_blank" class="btn btn-outline-light px-5 font-weight-bold">
               <i class="fas fa-expand mr-2"></i> Expand
             </a>
           </p>
+       </div>
         </div>
-      </div>
+      ';
+      }
+      ?>
     </div>
 
   </div>

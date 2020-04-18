@@ -81,7 +81,7 @@
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
       loop: true,
-      effect: 'fade',
+      // effect: 'fade',
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
