@@ -35,7 +35,7 @@
   <form action="./dbh/login.php" class="" method="post">
     <div class="form-group">
       <label for="" class="">User Name</label>
-      <input type="text" name="username" id="" class="form-control" placeholder="" aria-describedby="helpId" required autocomplete="off">
+      <input type="text" name="username" id="" class="form-control" placeholder="" aria-describedby="helpId" required autocomplete="off" autofocus>
     </div>
     <div class="form-group">
       <label for="" class="">Password</label>

@@ -40,8 +40,8 @@
          </li>
        </ul>
        <form class="form-inline my-2 ml-3 my-lg-0">
-         <button class="btn btn-danger my-2 my-sm-0 btn-sm px-4 rounded-pill font-weight-bold" type="submit">Login /
-           Sign up</button>
+         <a href="./login.php" class="btn btn-danger my-2 my-sm-0 btn-sm px-4 rounded-pill font-weight-bold" type="submit">Login /
+           Sign up</a>
        </form>
      </div>
    </nav>

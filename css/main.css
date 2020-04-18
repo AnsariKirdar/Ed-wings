@@ -37,12 +37,14 @@
 .index-sidler-h1 {
     font-family: northline;
     font-size: 6vw;
+    text-shadow: 4px 4px #000;
 }
 
 .index-sidler-p {
     width: 37vw;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 2px 1px #000;
 }
 
 .index-sidler-a a {
@@ -52,6 +54,8 @@
     -webkit-animation: none;
     -moz-animation: none;
     animation: none;
+    text-shadow: 2px 1px 3px #000;
+    box-shadow: 2px 2px 4px #000, -2px -2px 4px #000;
 }
 
 .index-sidler-a a:hover {
@@ -86,7 +90,7 @@
     z-index: 3;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .5);
+    /* background-color: rgba(0, 0, 0, .5); */
     display: flex;
     justify-content: center;
     align-items: center;

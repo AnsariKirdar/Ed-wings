@@ -56,6 +56,10 @@
                   <label for="">Description</label>
                   <input type="text" name="description" class="form-control form-control-lg" require>
                 </div>
+                <!-- <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                  <label for="">Description</label>
+                  <input type="file" name="file" class="form-control form-control-lg" require>
+                </div> -->
                 <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
                   <label for=""></label>
                   <button type="submit" name="add_location" class="btn btn-success font-weight-bold px-4 rounded-pill">

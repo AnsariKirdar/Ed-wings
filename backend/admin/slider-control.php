@@ -131,7 +131,7 @@
                 <div class="modal-footer">
                   <input type="text" name="s_id" value="'. $n_id.'" id="link" class="form-control form-control-lg" hidden>
                   <button type="reset" class="btn btn-danger font-weight-bold px-4 rounded-pill" data-dismiss="modal"><i class="fas fa-trash-restore"></i> Reset & Close</button>
-                  <button type="submit" name="upload_slider" class="btn btn-success font-weight-bold px-4 rounded-pill"> <i class="fas fa-cloud-upload-alt"></i> Update</button>
+                  <button type="submit" name="upload_slider" class="btn btn-success font-weight-bold px-4 rounded-pill text-white"> <i class="fas fa-cloud-upload-alt"></i> Update</button>
                 </div>
                 </form>
               </div>
@@ -147,7 +147,7 @@
               echo '...' . '</p>
                  <p class="text-center mb-1">
                  <button type="button" data-toggle="modal" data-target="#a' . $n_id . '" class="btn btn-sm text-white btn-primary px-4 rounded-pill"><span> <i class="fas fa-pencil-alt"></i> </span> Edit</button>
-                 <a href="./slider-delete.php?s_id=' . $s_id . '" class="btn btn-sm btn-danger px-4 rounded-pill"> <span class="font-weight-normal"><i class="fas fa-trash-alt"></i></span> Delete</a>
+                 <a href="./slider-delete.php?s_id=' . $s_id . '" class="btn btn-sm btn-danger px-4 rounded-pill text-white"> <span class="font-weight-normal"><i class="fas fa-trash-alt"></i></span> Delete</a>
                  </p>
                </div>
                </div>

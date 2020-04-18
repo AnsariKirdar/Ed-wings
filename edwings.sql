@@ -6,7 +6,7 @@
 -- Generation Time: Apr 16, 2020 at 11:48 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
-
+-- Creatate Data Base
 CREATE database `edwings`;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";

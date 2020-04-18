@@ -6,7 +6,7 @@
   <meta name="description" content="">
   <!-- meta tags -->
   <?php include './inc/head-links.php';?>
-<!-- Comment -->
+
 </head>
 
 <body class="" id="body">

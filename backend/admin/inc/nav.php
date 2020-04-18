@@ -19,6 +19,24 @@
            <a class="nav-link text-danger" href="./location.php">Locations</a>
          </li>
          <li class="nav-item active">
+           <a class="nav-link text-danger" href="./e-Brochure.php">E-Brochure</a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link text-danger" href="./testimonial.php">Testimonial</a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link text-danger" href="#">Package's</a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link text-danger" href="./itinerary.php">Itinerary</a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link text-danger" href="./bolgs.php">Blogs</a>
+         </li>
+         <li class="nav-item active">
+           <a class="nav-link text-danger" href="#">Blogs</a>
+         </li>
+         <li class="nav-item active">
            <a class="nav-link text-danger" href="#">Blogs</a>
          </li>
          <li class="nav-item active">
@@ -49,8 +67,7 @@
          </li>
        </ul>
        <form class="form-inline my-2 ml-3 my-lg-0">
-         <button class="btn btn-danger my-2 my-sm-0 btn-sm px-4 rounded-pill font-weight-bold" type="submit">Login /
-           Sign up</button>
+         <a href="logout.php" class="btn btn-danger my-2 my-sm-0 btn-sm px-4 rounded-pill font-weight-bold text-white" type="submit"> <i class="fas fa-lock    "></i> Logout</a>
        </form>
      </div>
    </nav>
