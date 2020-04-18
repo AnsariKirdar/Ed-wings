@@ -106,7 +106,7 @@
     <div class="card-columns mt-5 border-0">
       <?php
       include './dbh/conn.php';
-      $sql = 'SELECT * FROM `gallery` ORDER BY `gallery`.`c_date` DESC';
+      $sql = 'SELECT * FROM `gallery` ORDER BY `gallery`.`id` DESC';
       $result = mysqli_query($conn, $sql);
       while ($row = mysqli_fetch_assoc($result)) {
         $thumb = trim($row['thumb']);

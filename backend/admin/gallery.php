@@ -8,9 +8,9 @@
   <?php include './inc/inc.php'; ?>
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
   <style>
-    .card {
-      border-radius: 10px;
-    }
+  .card {
+    border-radius: 10px;
+  }
   </style>
 </head>
 
@@ -29,15 +29,18 @@
             <div class="row">
               <div class="form-group col-lg-12 col-md-12 col-sm-12">
                 <label for="">Title</label>
-                <input type="text" name="title" id="" class="form-control form-control-lg" placeholder="" aria-describedby="helpId" require>
+                <input type="text" name="title" id="" class="form-control form-control-lg" placeholder=""
+                       aria-describedby="helpId" require>
               </div>
               <div class="form-group col-lg-6 col-md-6 col-sm-12">
                 <label for="">Thumbnails Image</label>
-                <input type="file" name="thumb" id="thumb" class="form-control form-control-lg  form-control-file" placeholder="" aria-describedby="helpId" require>
+                <input type="file" name="thumb" id="thumb" class="form-control form-control-lg  form-control-file"
+                       placeholder="" aria-describedby="helpId" require>
               </div>
               <div class="form-group col-lg-6 col-md-6 col-sm-12">
                 <label for="">Full Size Image</label>
-                <input type="file" name="full_img" id="full_img" class="form-control form-control-lg  form-control-file" placeholder="" aria-describedby="helpId" require>
+                <input type="file" name="full_img" id="full_img" class="form-control form-control-lg  form-control-file"
+                       placeholder="" aria-describedby="helpId" require>
               </div>
               <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
                 <label for=""></label>
@@ -53,7 +56,7 @@
         <div class="card-columns">
           <?php
           include './../../dbh/conn.php';
-          $result = mysqli_query($conn, 'SELECT * FROM `gallery`ORDER BY `c_date` DESC');
+          $result = mysqli_query($conn, 'SELECT * FROM `gallery` ORDER BY `id` DESC');
           if ($result) {
             while ($row = mysqli_fetch_assoc($result)) {
               $title = $row['title'];
@@ -73,8 +76,30 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <form action="#" method="post" enctype="multipart/form-data">
-                    
+                  <form action="./gallery-update.php" method="post" enctype="multipart/form-data">
+                     <div class="row">
+              <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                <label for="">Title</label>
+                <input type="text" name="title" value="'.$title. '" id="" class="form-control form-control-lg" placeholder="" aria-describedby="helpId" require>
+                <input type="text" name="s_id" value="'. $s_id.'" hidden id="" class="form-control form-control-lg" placeholder="" aria-describedby="helpId" require>
+              </div>
+              <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
+                       <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" name="file_upload" id="customCheck' . $n_id . '"onclick="display_slider_update(' . $n_id . ')">
+                      <label class="custom-control-label font-weight-bold text-muted" for="customCheck' . $n_id . '">Check this for update slider image</label>
+                       </div>
+                      </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12" id="slider'.$n_id.'" style="display:none;">
+              <img src="./../../img/gallery/thumb/2a069651f789df22f60e57534f038f4ea.jpg" class="w-100 rounded-lg" alt=".."> 
+                <label for="">Thumbnails Image</label>
+                <input type="file" name="thumb" id="thumb" class="form-control form-control-lg  form-control-file" placeholder="" aria-describedby="helpId" require>
+              </div>
+              <div class="form-group col-lg-6 col-md-6 col-sm-12" id="slider1'.$n_id.'" style="display:none;">
+              <img src="./../../img/gallery/thumb/2a069651f789df22f60e57534f038f4ea.jpg" class="w-100 rounded-lg" alt=".."> 
+                             <label for="">Full Size Image</label>
+                <input type="file" name="full_img" id="full_img" class="form-control form-control-lg  form-control-file" placeholder="" aria-describedby="helpId" require>
+              </div>
+               </div> 
                 </div>
                 <div class="modal-footer">
                   <input type="text" name="s_id" value="' . $n_id . '" id="link" class="form-control form-control-lg" hidden>
@@ -109,9 +134,25 @@
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
 </body>
+<script>
+function display_slider_update(params1) {
+  var param11 = params1
+  param1 = 'slider' + param11;
+  param2 = 'slider1' + param11;
+  console.log(param1);
+  document.getElementById(param1).style.display = "";
+  document.getElementById(param2).style.display = "";
+}
+</script>
 
 </html>

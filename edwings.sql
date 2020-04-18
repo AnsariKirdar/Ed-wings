@@ -1,16 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 16, 2020 at 11:48 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
--- Creatate Data Base
-CREATE database `edwings`;
+-- Generation Time: Apr 18, 2020 at 11:19 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -128,6 +125,38 @@ INSERT INTO `customer_feedback` (`id`, `name`, `office_name`, `next_destination`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `gallery`
+--
+
+CREATE TABLE `gallery` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `thumb` longtext DEFAULT NULL,
+  `full_img` longtext DEFAULT NULL,
+  `u_by` varchar(255) DEFAULT NULL,
+  `e_date` datetime DEFAULT current_timestamp(),
+  `c_date` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`id`, `title`, `thumb`, `full_img`, `u_by`, `e_date`, `c_date`) VALUES
+(7, 'Taj Mahal', ' 444c5fa7e80ce8facf2c8aad052f1b26a.jpg', ' 444c5fa7e80ce8facf2c8aad052f1b26a.jpg', 'Kirdar', '2020-04-18 23:53:48', '0000-00-00 00:00:00'),
+(8, 'lorem', ' 2a069651f789df22f60e57534f038f4ea.jpg', ' 2a069651f789df22f60e57534f038f4ea.jpg', 'Kirdar', '2020-04-18 23:54:03', '0000-00-00 00:00:00'),
+(9, 'lorem', ' c79689cbf24d39a5d7bb50b9a94a0e98a.jpg', ' c79689cbf24d39a5d7bb50b9a94a0e98a.jpg', 'Kirdar', '2020-04-18 23:54:33', '0000-00-00 00:00:00'),
+(10, 'lorem', ' adf55fb6614250aa72b934b38f917c11a.jpg', ' adf55fb6614250aa72b934b38f917c11a.jpg', 'Kirdar', '2020-04-18 23:54:47', '0000-00-00 00:00:00'),
+(11, 'lorem', ' 62dd3ebc22035fc9ce159e842a88578da.jpg', ' 62dd3ebc22035fc9ce159e842a88578da.jpg', 'Kirdar', '2020-04-18 23:55:13', '0000-00-00 00:00:00'),
+(12, 'lorem', ' 404e80af2cc5732ee64e88fd5f5f5716a.jpg', ' 404e80af2cc5732ee64e88fd5f5f5716a.jpg', 'Kirdar', '2020-04-18 23:55:26', '0000-00-00 00:00:00'),
+(13, 'lorem', ' 7242befd8e31d40af9cb1d675d487d11a.jpg', ' 7242befd8e31d40af9cb1d675d487d11a.jpg', 'Kirdar', '2020-04-18 23:55:50', '0000-00-00 00:00:00'),
+(14, 'lorem', ' 618f3950b7ef36179dcb42a11c7f52eba.jpg', ' 618f3950b7ef36179dcb42a11c7f52eba.jpg', 'Kirdar', '2020-04-18 23:55:58', '0000-00-00 00:00:00'),
+(15, 'Taj Mahalaaa', ' 387eaa621a7dbc8d3f68bb560575b928a.jpg', ' 387eaa621a7dbc8d3f68bb560575b928a.jpg', 'Kirdar', '2020-04-19 02:48:18', '0000-00-00 00:00:00'),
+(16, 'Taj Mahalaa', ' e00cf0dfd0444983803d6984d7091e81a.jpg', ' e00cf0dfd0444983803d6984d7091e81a.jpg', 'Kirdar', '2020-04-19 02:48:44', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `login`
 --
 
@@ -174,9 +203,10 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id`, `title`, `description`, `link`, `link_text`, `file`, `c_by`, `e_by`, `c_date`) VALUES
-(8, '123', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, nam eius tenetur distinctio perferendis modi ab necessitatibus beatae minus deserunt, maxime inventore quidem facere totam veniam sunt voluptate fuga porro dicta? Dolorem quasi error volupta', 'Kirdar', 'Book Now', 'd01a43e098797a4a3f331b58fc623f5fblack-iphone-7-1275229.jpg', '', 'Kirdar', '0000-00-00 00:00:00'),
-(13, '789', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, nam eius tenetur distinctio perferendis modi ab necessitatibus beatae minus deserunt, maxime inventore quidem facere totam veniam sunt voluptate fuga porro dicta? Dolorem quasi error volupta', 'Kirdar', 'Book Now', '2f51666d51e00ec5a9083db5ec58260eslide-3.jpg', '', 'Kirdar', '0000-00-00 00:00:00'),
-(16, 'Vision Technology', 'Kirdar', 'Kirdar', 'Book Now', '43a67436e3fb5f1f17ddb036c2995758android-android-phone-cell-phone-cellphone-404280.jpg', 'Kirdar', NULL, '2020-04-16 04:28:46');
+(8, 'Mountain Climbing', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, nam eius tenetur distinctio perferendis modi ab necessitatibus beatae minus deserunt, maxime inventore quidem facere totam veniam sunt voluptate fuga porro dicta? Dolorem quasi error volupta', 'Kirdar', 'Best Deal', 'b898dd2511c21ca869bd3aca3d9f70c6photo-1508558936510-0af1e3cccbab.jpg', '', 'Kirdar', '0000-00-00 00:00:00'),
+(13, 'Dubai', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, nam eius tenetur distinctio perferendis modi ab necessitatibus beatae minus deserunt, maxime inventore quidem facere totam veniam sunt voluptate fuga porro dicta? Dolorem quasi error volupta', 'Kirdar', 'Book Now', 'e3d426fb2cc81c5fc06cd1bf99347523photo-1462007895615-c8c073bebcd8.jpg', '', 'Kirdar', '0000-00-00 00:00:00'),
+(16, 'Prias', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corrupti natus reprehenderit culpa dolores nisi quidem sapiente, ipsam sunt voluptatem odio quibusdam? Pariatur deserunt quae facilis molestiae saepe est. Maiores.', 'Kirdar', 'Book Now', '0a34dfe740ebdb6607e8b25eaa9a03b9photo-1502602898657-3e91760cbb34.png', 'Kirdar', 'Kirdar', '2020-04-16 04:28:46'),
+(22, 'Taj Mahal', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, nam eius tenetur distinctio perferendis modi ab necessitatibus beatae minus deserunt, maxime inventore quidem facere totam veniam sunt voluptate fuga porro dicta? Dolorem quasi error volupta', 'Kirdar', 'Book Now', '7dbc23d724d7beef76e443dabde439eca.jpg', 'Kirdar', NULL, '2020-04-18 23:49:09');
 
 --
 -- Indexes for dumped tables
@@ -198,6 +228,12 @@ ALTER TABLE `country`
 -- Indexes for table `customer_feedback`
 --
 ALTER TABLE `customer_feedback`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `gallery`
+--
+ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -235,6 +271,12 @@ ALTER TABLE `customer_feedback`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
+-- AUTO_INCREMENT for table `gallery`
+--
+ALTER TABLE `gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
@@ -244,7 +286,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
