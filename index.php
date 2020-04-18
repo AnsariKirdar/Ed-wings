@@ -59,7 +59,9 @@
       <div class="swiper-button-prev index-slider-button"></div>
     </div>
   </div>
-  <div class="vh-100"></div>
+  <div class="vh-100 bg-white">
+    hihih
+  </div>
   <div class="vh-100"></div>
 
   <!-- footer  -->
@@ -79,6 +81,7 @@
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
       loop: true,
+      effect: 'fade',
       pagination: {
         el: '.swiper-pagination',
         clickable: true,

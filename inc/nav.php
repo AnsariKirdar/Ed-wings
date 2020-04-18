@@ -22,7 +22,7 @@
            <a class="nav-link text-danger" href="#">Blogs</a>
          </li>
          <li class="nav-item active">
-           <a class="nav-link text-danger" href="#">Gallery</a>
+           <a class="nav-link text-danger" href="./gallery.php">Gallery</a>
          </li>
          <li class="nav-item active">
            <a class="nav-link text-danger" href="#">Special Tours</a>
