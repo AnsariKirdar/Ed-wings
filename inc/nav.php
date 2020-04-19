@@ -19,7 +19,7 @@
            <a class="nav-link text-danger" href="#">Steals Deals</a>
          </li>
          <li class="nav-item active">
-           <a class="nav-link text-danger" href="#">Blogs</a>
+           <a class="nav-link text-danger" href="./blogs.php">Blogs</a>
          </li>
          <li class="nav-item active">
            <a class="nav-link text-danger" href="./gallery.php">Gallery</a>
@@ -61,9 +61,9 @@
             }
             echo '
                       <div class="px-2 m-1 my-2">
-                        <h5 class="text-danger font-weight-bold">'.$continent.'</h5>
+                        <h5 class="text-danger font-weight-bold">' . $continent . '</h5>
                         <ul class="text-danger font-weight-bold px-2">
-                          '.$li.'
+                          ' . $li . '
                         </ul>
                       </div>
                       ';
