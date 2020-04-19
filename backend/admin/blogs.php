@@ -12,6 +12,22 @@
   .note-dropdown-menu ul li a {
     color: #000;
   }
+
+  .nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 13px;
+  }
+
+  .nav-pills .nav-link {
+    font-weight: bold;
+    color: var(--danger);
+  }
+
+  .nav-pills .nav-link.active {
+    background-color: var(--danger);
+    font-weight: bold;
+  }
   </style>
 </head>
 
@@ -23,35 +39,122 @@
         <!-- refired Mg Php -->
         <?php require './../../dbh/msg.php'; ?>
         <div class="">
-          <h2 class="font-weight-bold">
-            Post a Blog
-          </h2>
-          <form action="./blogs-upload.php" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="">Title</label>
-              <input type="text" name="title" id="" class="form-control form-control-lg" placeholder=""
-                     aria-describedby="helpId">
+          <!-- Nav tabs -->
+          <ul class="nav nav-pills nav-fill">
+            <li class="nav-item active">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+                 aria-selected="true">
+                Post Blog
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                 aria-selected="false">View Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab"
+                 aria-controls="messages" aria-selected="false">Messages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
+                 aria-controls="settings" aria-selected="false">Settings</a>
+            </li>
+          </ul>
+
+          <!-- Tab panes -->
+          <div class="tab-content">
+            <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+              <h2 class="font-weight-bold mt-2">
+                Post a Blog
+              </h2>
+
+              <form action="./blogs-upload.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="">Title</label>
+                  <input type="text" name="title" id="" class="form-control form-control-lg" placeholder=""
+                         aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                  <label for="">Sub Tilte</label>
+                  <input type="text" name="sub_title" id="" class="form-control form-control-lg" placeholder=""
+                         aria-describedby="helpId">
+                </div>
+                <div class="form-group">
+                  <label for="">File</label>
+                  <input type="file" name="file" id="" class="form-control form-control-lg" placeholder=""
+                         aria-describedby="helpId">
+                  <p class="text-muted small font-weight-bold mt-1 ml-2">
+                    We Highly Recommend to have img with 1000px X 400px
+                  </p>
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label for="">Content</label>
+                  <textarea name="content" id="" class="form-control form-control-lg summernote"></textarea>
+                </div>
+                <div class="form-group text-center">
+                  <button class="btn btn-success btn-lg rounded-pill px-5 font-weight-bold" name="upload_blogs">
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
-            <div class="form-group">
-              <label for="">Sub Tilte</label>
-              <input type="text" name="sub_title" id="" class="form-control form-control-lg" placeholder=""
-                     aria-describedby="helpId">
+            <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+<div class="row">
+  
+  
+  <?php
+              require './../../dbh/conn.php';
+
+              $result = mysqli_query($conn, "SELECT * FROM `blogs` order by id desc");
+              while ($row = mysqli_fetch_assoc($result)) {
+                $id = bin2hex($row['id']);
+                $title = $row['title'];
+                $file = $row['file'];
+                $content = $row['content'];
+                if(strlen($title)>47){
+$title = substr($title,0,50);
+                }
+                echo '
+                <div class="col-lg-4 col-md-6 col-m-12">
+                    <div class="bg-white my-2 px-2 py-2 rounded-lg d-flex flex-column justify-content-around align-items-center">
+                      <div class="w-100">
+                      <img src="./../../img/blogs/'. $file .'" class="img-thumbnail" alt="">
+                      </div>
+                      <div class="w-100 px-2">
+                      <h3 class="my-3">
+                      ' . $title . '
+                      </h3>
+                      </div>
+                      <div class="w-100 px-2">
+                      <button class="my-2 rounded-pill font-weight-bold btn btn-block btn-danger">
+                    <i class="fas fa-plus"></i> Add Image
+                  </button>
+                      <a href="./blogs-delete.php?bid='.$id.'" class="my-2 rounded-pill font-weight-bold btn btn-block btn-danger">
+                    <i class="fas fa-trash-alt"></i> Delete This
+                  </a>
+                  </button>
+                      <button class="my-2 rounded-pill font-weight-bold btn btn-block btn-success">
+                    <i class="fas fa-pen-alt"></i> Edit This
+                  </button>
+                      <a href="./../../blogs-display.php?bid='. $id.'" target="_blank" class="my-2 rounded-pill font-weight-bold btn btn-block btn-success">
+                    <i class="fas fa-eye"></i> View This
+                  </a>
+                      </div>
+                    </div>
+                    </div>
+                  ';
+              }
+              ?>
+
             </div>
-            <div class="form-group">
-              <label for="">File</label>
-              <input type="file" name="file" id="" class="form-control form-control-lg" placeholder=""
-                     aria-describedby="helpId">
-              </label>
-              <div class="form-group">
-                <label for="">Content</label>
-                <textarea name="content" id="" class="form-control form-control-lg summernote"></textarea>
-              </div>
-              <div class="form-group text-center">
-                <button class="btn btn-success btn-lg rounded-pill px-5 font-weight-bold" name="upload_blogs">
-                  Submit
-                </button>
-              </div>
-          </form>
+
+            </div>
+            <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">...</div>
+            <div class="tab-pane" id="settings" role="tabpanel" aria-labelledby="settings-tab">...</div>
+          </div>
+
         </div>
         <!-- Bondurey Line No Code after This -->
       </div>
@@ -76,7 +179,7 @@
   <script type="text/javascript">
   $(document).ready(function() {
     $('.summernote').summernote({
-      height: 200,
+      height: 250,
       tabsize: 2,
       toolbar: [
         ['Basic', ['style', 'fontsize']],

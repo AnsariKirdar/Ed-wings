@@ -6,12 +6,12 @@ if (!isset($_GET['s_id'])) {
   $id = hex2bin($id);
   echo$id;
   include '../../dbh/conn.php';
-  $sql = "SELECT `file` FROM `slider`WHERE id='$id'";
+  $sql = "SELECT `file` FROM `slider`WHERE id='$id";
   $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
   $file = $row['file'];
   unlink('./../../img/banner/' . $file . '');
-  $sql = "DELETE FROM `slider` WHERE id='$id'";
+  $sql = "DELETE FROM `slider` WHERE id=$id";
   $result = mysqli_query($conn, $sql);
   if (!$result) {
     header('Location: ./slider-control.php?msg=We encountered an error with the Deleteing Data please try again&&msg_class=danger');

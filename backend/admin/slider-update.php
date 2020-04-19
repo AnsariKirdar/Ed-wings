@@ -14,7 +14,7 @@ if (!isset($_POST['upload_slider'])) {
     $link_text = mysqli_real_escape_string($conn, trim(ucfirst($_POST['link_text'])));
     $e_by = $_SESSION['user'];
     $filename = $_FILES['slider']['name'];
-if ($filename) {
+    if ($filename) {
       if ($_FILES['slider']['error']) {
         header('Location: ./slider-control.php?msg=We encountered an error with the file please try again&&msg_class=danger');
       } else {
@@ -22,7 +22,7 @@ if ($filename) {
         $file_ext_count1 = count($file_ext1);
         $cnt1 = $file_ext_count1 - 1;
         $filename = 'a.' . $file_ext1[$cnt1];
-    
+        $filename = md5(date('dmy-hmi')) . $filename;
         $move = move_uploaded_file($_FILES['slider']['tmp_name'], '../../img/banner/' . $filename);
         if (!$move) {
           header('Location: ./slider-control.php?msg=We encountered an error with the uploading image please try again&&msg_class=danger');
@@ -42,7 +42,7 @@ if ($filename) {
           }
         }
       }
-}else {
+    } else {
       $sql = "UPDATE `slider` SET `title`='$title',`description`='$description',`link`='$link',`link_text`='$link_text',`e_by`='$e_by' WHERE id='$id'";
       echo $sql;
       $result = mysqli_query($conn, $sql);
@@ -51,8 +51,6 @@ if ($filename) {
       } else {
         header('Location: ./slider-control.php?msg=Great this New Slider is Upload and Live on Website&&msg_class=success');
       }
-}
-
-    
+    }
   }
 }
