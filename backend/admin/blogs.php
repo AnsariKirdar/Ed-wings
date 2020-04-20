@@ -110,6 +110,7 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                   $id = bin2hex($row['id']);
                   $title = $row['title'];
+                  $subtitle = $row['sub_title'];
                   $file = $row['file'];
                   $content = $row['content'];
                   if (strlen($title) > 47) {
@@ -176,7 +177,7 @@
                     <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title font-weight-bold">' . $title . '</h5>
+                          <h5 class="modal-title font-weight-bold">Update ' . $title . '</h5>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -185,12 +186,12 @@
                           <div class="modal-body">
                             <div class="form-group">
                               <label for="">Title</label>
-                              <input type="text" name="title" id="" class="form-control form-control-lg" placeholder=""
+                              <input type="text" name="title" value="'.$title.'" id="" class="form-control form-control-lg" placeholder=""
                                 aria-describedby="helpId">
                             </div>
                             <div class="form-group">
                               <label for="">Sub Tilte</label>
-                              <input type="text" name="sub_title" id="" class="form-control form-control-lg" placeholder=""
+                              <input type="text" name="sub_title" value="'.$subtitle.'" id="" class="form-control form-control-lg" placeholder=""
                                 aria-describedby="helpId">
                             </div>
                             <div class="form-group">
@@ -204,7 +205,7 @@
                             </div>
                             <div class="form-group">
                               <label for="">Content</label>
-                              <textarea name="content" id="" class="form-control form-control-lg summernote"></textarea>
+                              <textarea name="content" id="" class="form-control form-control-lg summernote">'.$content.'</textarea>
                             </div>
                             <input type="text" name="blogsId" value="' . $id . '" id="" hidden>
                           </div>
