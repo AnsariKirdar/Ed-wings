@@ -1,1 +1,0 @@
-INSERT INTO `blogs` (`id`, `title`, `sub_title`, `content`, `file`, `likes`, `views`, `data`, `header_img`, `c_by`, `c_date`) VALUES (NULL, 'Taj Mahal', 'Kirar Sub Tilte', '123', '613b7f954fa87dd5dc676efe358bd950a.jpg', '1', '1', 'Monday 20-April-2020', 'Banner.png', 'Kirdar', '2020-04-20 19:51:42')
