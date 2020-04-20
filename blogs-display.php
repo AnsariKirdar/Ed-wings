@@ -53,7 +53,7 @@
     }
 
     .blog_header {
-      height: 170px;
+      /* height: 170px; */
       width: 100%;
       background-color: #222;
       border-radius: 8px;
@@ -129,10 +129,11 @@
 
   ?>
   <!-- Nav Bar -->
-<!-- Retry -->
+  <!-- Retry -->
   <div class="container my-5">
     <div class="container bg-light mb-2 rounded-lg p-2">
-      <div class="blog_header" style="background-image: url('./img/blogs/<?php echo trim($row['header_img']); ?>');">
+      <div class="">
+        <img src="./img/blogs/<?php echo trim($row['header_img']); ?>"  class="blog_header" alt="" srcset="">
       </div>
 
       <div class="px-3 my-3">
@@ -154,15 +155,13 @@
         <div class="card-columns mt-5 border-0">
           <?php
           include './dbh/conn.php';
-          $sql = 'SELECT * FROM `gallery` ORDER BY `gallery`.`id` DESC';
+          $sql = "SELECT * FROM `blogs_gallery` where blogs_id = $id ORDER BY `blogs_gallery`.`id` DESC";
           $result = mysqli_query($conn, $sql);
           while ($row = mysqli_fetch_assoc($result)) {
-            $thumb = trim($row['thumb']);
-            $title = trim($row['title']);
-            $full = trim($row['full_img']);
+            $file = trim($row['file']);
             echo '
       <div class="card p-0 border-0 position-relative">
-        <img class="card-img-top" style="border-radius: 12px;" src="./img/gallery/thumb/' . $thumb . '" alt="">
+        <img class="card-img-top" style="border-radius: 12px;" src="./img/blogs_gallery/' . $file . '" alt="">
         </div>
       ';
           }
@@ -171,7 +170,7 @@
         <p class="like_share_comment my-4 bg-danger px-4 font-weight-bold py-1 text-white rounded-pill">
           Posted by Ed-wings &nbsp; &nbsp; &nbsp; &nbsp;
           <span class="" style="cursor: pointer;" id="likes">
-            <i class="fas fa-heart    " aria-hidden="true"></i> Like <span id="like"></span>
+            <i class="fas fa-heart    " aria-hidden="true"></i> Like <span id="like"><?php echo $c_like-1;?></span>
           </span>
           &nbsp; &nbsp; &nbsp; &nbsp;
           <span class="" style="cursor: pointer;">
