@@ -42,22 +42,18 @@
           <!-- Nav tabs -->
           <ul class="nav nav-pills nav-fill">
             <li class="nav-item active">
-              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
-                aria-selected="true">
+              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
                 Post Blog
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                aria-selected="false">View Blogs</a>
+              <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">View Blogs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab"
-                aria-controls="messages" aria-selected="false">Messages</a>
+              <a class="nav-link" id="messages-tab" data-toggle="tab" href="#messages" role="tab" aria-controls="messages" aria-selected="false">Messages</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab"
-                aria-controls="settings" aria-selected="false">Settings</a>
+              <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">Settings</a>
             </li>
           </ul>
 
@@ -71,18 +67,15 @@
               <form action="./blogs-upload.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                   <label for="">Title</label>
-                  <input type="text" name="title" id="" class="form-control form-control-lg" placeholder=""
-                    aria-describedby="helpId">
+                  <input type="text" name="title" id="" class="form-control form-control-lg" placeholder="" aria-describedby="helpId">
                 </div>
                 <div class="form-group">
-                  <label for="">Sub Tilte</label>
-                  <input type="text" name="sub_title" id="" class="form-control form-control-lg" placeholder=""
-                    aria-describedby="helpId">
+                  <label for="">Sub Title</label>
+                  <input type="text" name="sub_title" id="" class="form-control form-control-lg" placeholder="" aria-describedby="helpId">
                 </div>
                 <div class="form-group">
                   <label for="">File</label>
-                  <input type="file" name="file" id="" class="form-control form-control-lg" placeholder=""
-                    aria-describedby="helpId">
+                  <input type="file" name="file" id="" class="form-control form-control-lg" placeholder="" aria-describedby="helpId">
                   <p class="text-muted small font-weight-bold mt-1 ml-2">
                     We Highly Recommend to have img with 1000px X 400px
                   </p>
@@ -186,15 +179,29 @@
                           <div class="modal-body">
                             <div class="form-group">
                               <label for="">Title</label>
-                              <input type="text" name="title" value="'.$title.'" id="" class="form-control form-control-lg" placeholder=""
+                              <input type="text" name="title" value="' . $title . '" id="" class="form-control form-control-lg" placeholder=""
                                 aria-describedby="helpId">
                             </div>
                             <div class="form-group">
-                              <label for="">Sub Tilte</label>
-                              <input type="text" name="sub_title" value="'.$subtitle.'" id="" class="form-control form-control-lg" placeholder=""
+                              <label for="">Sub Title</label>
+                              <input type="text" name="sub_title" value="' . $subtitle . '" id="" class="form-control form-control-lg" placeholder=""
                                 aria-describedby="helpId">
                             </div>
-                            <div class="form-group">
+
+                            <div class="w-100 my-4">
+                            <center>
+                              <img src="./../../img/blogs/' . $file . '" class="w-50 my-2" alt="" style="border-radius:20px;">
+                            </center>
+                            </div>
+
+                            <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
+                            <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck' . $id . '"onclick="display_blogs_update(' . $id . ')">
+                            <label class="custom-control-label font-weight-bold text-muted" for="customCheck' . $id . '">Check this for update slider image</label>
+                            </div>
+                            </div>
+
+                            <div class="form-group" style="display:none;" id="blogs'.$id.'">
                               <label for="">File</label>
                               <input type="file" name="file" id="" class="form-control form-control-lg" placeholder=""
                                 aria-describedby="helpId">
@@ -203,9 +210,11 @@
                               </p>
                               </label>
                             </div>
+
+
                             <div class="form-group">
                               <label for="">Content</label>
-                              <textarea name="content" id="" class="form-control form-control-lg summernote">'.$content.'</textarea>
+                              <textarea name="content" id="" class="form-control form-control-lg summernote">' . $content . '</textarea>
                             </div>
                             <input type="text" name="blogsId" value="' . $id . '" id="" hidden>
                           </div>
@@ -245,18 +254,21 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
   <script type="text/javascript" src="../../vendor/summernote-develop/dist/summernote.js"></script>
 
   <script type="text/javascript">
+    function display_blogs_update(params1) {
+      var param1 = params1
+      param1 = 'blogs' + param1;
+      console.log(param1);
+      document.getElementById(param1).style.display = "";
+    }
     $(document).ready(function() {
       $('.summernote').summernote({
         height: 250,

@@ -33,7 +33,6 @@ if (!isset($_POST['upload_slider'])) {
           $file = $row['file'];
           unlink('./../../img/banner/' . $file . '');
           $sql = "UPDATE `slider` SET `title`='$title',`description`='$description',`link`='$link',`link_text`='$link_text',`file`='$filename',`e_by`='$e_by' WHERE id='$id'";
-          echo $sql;
           $result = mysqli_query($conn, $sql);
           if (!$result) {
             header('Location: ./slider-control.php?msg=We encountered an error with the Updateing Data please try again&&msg_class=danger');
@@ -44,7 +43,6 @@ if (!isset($_POST['upload_slider'])) {
       }
     } else {
       $sql = "UPDATE `slider` SET `title`='$title',`description`='$description',`link`='$link',`link_text`='$link_text',`e_by`='$e_by' WHERE id='$id'";
-      echo $sql;
       $result = mysqli_query($conn, $sql);
       if (!$result) {
         header('Location: ./slider-control.php?msg=We encountered an error with the Updateing Data please try again&&msg_class=danger');
