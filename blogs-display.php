@@ -126,8 +126,7 @@
       }
     }
   }
-
-  ?>
+ ?>
   <!-- Nav Bar -->
   <!-- Retry -->
   <div class="container my-5">
