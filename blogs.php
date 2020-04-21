@@ -8,7 +8,7 @@
   <?php include './inc/head-links.php'; ?>
   <style>
     body {
-      background-image: url(https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2553&q=80);
+      background-image: url('./img/bg/photo-1507525428034-b723cf961d3e.jpg');
     }
 
     .card {

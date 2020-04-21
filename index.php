@@ -7,8 +7,69 @@
   <!-- meta tags -->
   <?php include './inc/head-links.php'; ?>
 
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="./css/swiper.min.css">
   <link rel="stylesheet" href="./css/main.css">
+  <style>
+    .top_destination .swiper-container-2 {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 50px;
+    }
+
+    .top_destination .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      /* height: 200px; */
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      border-radius: 12px;
+      background-color: aliceblue;
+      padding: 10px;
+    }
+
+    .swiper-container-3 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-container-3 .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      border-radius: 12px;
+      background-color: aliceblue;
+      padding: 10px;
+    }
+
+    .form-control:focus,
+    .form-control:active,
+    .form-control {
+      background-color: transparent !important;
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body class="" id="body">
@@ -59,10 +120,332 @@
       <div class="swiper-button-prev index-slider-button"></div>
     </div>
   </div>
-  <div class="vh-100 bg-white">
-    hihih
+  <div class="pb-5">
+
+    <div class="container my-5">
+      <h1 class="text-center text-white font-weight-bold">
+        Top Destinations
+      </h1>
+      <div class="top_destination overflow-hidden" id="top_destination">
+        <div class="swiper-container-2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 10</div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next2"></div>
+          <div class="swiper-button-prev2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container my-5">
+      <h1 class="text-center text-white font-weight-bold">
+        Tranding Destinations
+      </h1>
+      <div class="top_destination overflow-hidden" id="top_destination">
+        <div class="swiper-container-3">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide">Slide 10</div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next-3"></div>
+          <div class="swiper-button-prev-3"></div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="vh-100"></div>
+
+  <div class="bg-white my-5 py-5">
+    <h1 class="text-center text-black font-weight-bold">
+      Ed Wings Explore Interaries
+    </h1>
+    <div class="row mx-0 px-0 my-4 py-3">
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="card overflow-hidden shadow" style="border-radius:15px;">
+          <div>
+            <img class="card-img-top rounded-0" src="./img/blogs/8fedbcb07981ab25c0076007f11f907fa.jpg" alt="" srcset="">
+          </div>
+          <div class="card-body">
+            <h3 class="text-danger font-weight-bolder">
+              Republic Of Congo Africa
+            </h3>
+            <!-- <h4 class="card-title">Title</h4> -->
+            <p class="text-danger font-weight-bold">
+              7 Days / 6 Nights
+            </p>
+            <p class="text-secondary font-weight-bold my-2">
+              Tracking / Music / Sport +2 More
+            </p>
+            <p class="font-weight-bold text-danger my-2">
+              <span class="h4 font-weight-bolder">
+                <b>
+                  INR 190000
+                </b>
+              </span>
+              <span class="text-secondary small font-weight-bold">
+                Per Person
+              </span>
+            </p>
+            <p class="d-flex justify-content-around">
+              <button class="btn btn btn-danger w-100 mx-1 rounded-pill font-weight-bold">
+                More Detailes
+              </button>
+              <button class="btn btn btn-danger w-100 rounded-pill mx-1 font-weight-bold">
+                Buy Now
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="my-5 py-5">
+    <div class="container my-5 py-4">
+      <p class="text-center text-white h1 font-weight-bolder">
+        Dream -Travel - Repeat
+      </p>
+      <p class="px-5 text-white text-center h5">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ipsa repellat fugiat, sed consectetur iste
+        necessitatibus praesentium temporibus minus et ea officia possimus ut sunt voluptate in. Eius, cum debitis.
+      </p>
+      <div class="container row text-white my-5">
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <p class="text-center display-4">
+            <i class="fas fa-users" aria-hidden="true"></i>
+          </p>
+          <h3 class="text-center h5 font-weight-bold text-uppercase my-0 mt-3">
+            Group Internetires<br>
+          </h3>
+          <p class="small text-center text-uppercase">
+            Company Tours and Bonus
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <p class="text-center display-4">
+            <i class="fas fa-award"></i>
+          </p>
+          <h3 class="text-center h5 font-weight-bold text-uppercase my-0 mt-3">
+            Best Prices<br>
+          </h3>
+          <p class="small text-center text-uppercase">
+            Fit to Your Buget
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <p class="text-center display-4">
+            <i class="fas fa-umbrella-beach" aria-hidden="true"></i>
+          </p>
+          <h3 class="text-center h5 font-weight-bold text-uppercase my-0 mt-3">
+            Hand Pick Trips<br>
+          </h3>
+          <p class="small text-center text-uppercase">
+            Fit to Your Expectation
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-6">
+          <p class="text-center display-4">
+            <i class="fas fa-user-tie" aria-hidden="true"></i>
+          </p>
+          <h3 class="text-center h5 font-weight-bold text-uppercase my-0 mt-3">
+            Expert Support<br>
+          </h3>
+          <p class="small text-center text-uppercase">
+            to Ensure Convinces
+          </p>
+        </div>
+
+      </div>
+      <p class="text-center mt-3">
+        <a href="#" class="btn btn-lg btn-outline-light px-5 rounded-pill font-weight-bold">Start Planning Now</a>
+      </p>
+    </div>
+  </div>
+  <div class="container overflow-hidden my-5 py-5">
+    <p class="text-uppercase text-white font-weight-bold text-center h1 mb-5 pb-4">
+      Testimonials
+    </p>
+
+    <div class="w-100 testimonials swiper-container-initialized swiper-container-horizontal">
+      <div class="container">
+        <div class="testimonials swiper-container-initialized swiper-container-horizontal">
+          <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1110px, 0px, 0px);">
+            <div class="swiper-slide swiper-slide-active swiper-slide-duplicate-next swiper-slide-duplicate-prev">
+              <div>
+                <div class="text-white text-center">
+                 <span class="h2"> <i class="fas fa-quote-left" aria-hidden="true"></i></span>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
+                  quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
+                  sapiente, quae at et!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
+                  quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
+                  sapiente, quae at et!
+                 <span class="h2"> <i class="fas fa-quote-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="profile p-1 rounded-circle border-danger text-center my-3">
+                  <img src="https://ibighit.com/txt/images/txt/profile/member-sb.jpg" style="width:80px; border-radius:60px;" alt="">
+                  <p class="text-white mt-3 h4">
+                    Jone Simth
+                  </p>
+                  <p class="small text-white font-weight-bold">
+                    <span>
+                      <span class="text-danger font-weight-bold">
+                        From
+                      </span>
+                      Mumbia , India
+                    </span>
+                    <br>
+                    <span>
+                      <span class="text-danger font-weight-bold">
+                        Trip To
+                      </span>
+                      Spain ,Santiago de Compostela
+                    </span>
+                  </p>
+                </div>
+              </div>
+            </div>
+           
+          </dv>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination mt-5"></div>
+          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+      </div>
+      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+    </div>
+  </div>
+  <div class="d-lg-flex d-md-flex d-sm-block justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column py-5 my-5">
+    <div class="container">
+      <center>
+        <img src="./img/logo/nav-logo.png" width="400px" alt="">
+      </center>
+      <br>
+      <p class="h2 font-weight-bold text-light text-center text-uppercase">
+        Dream - TRavel - Repeat
+      </p>
+      <div class="d-flex mt-5 text-light justify-content-around">
+        <div class="w-100">
+          <p class="w-100 h2 text-center">
+            <span class="">
+              <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+            </span>
+          </p>
+          <p class="text-center mt-3 text-capitalize font-weight-bold">
+            Mumbai :<br>
+            7H New Sahakar Nagar,<br>
+            Chembur. Mumbai <br>
+            India - 400071
+          </p>
+        </div>
+        <div class="w-100">
+          <p class="w-100 h2 text-center">
+            <span class="">
+              <i class="fab fa-canadian-maple-leaf" aria-hidden="true"></i>
+            </span>
+          </p>
+          <p class="text-center mt-3 text-capitalize font-weight-bold">
+            Canada :<br>
+            1730 Albion Road, <br>
+            Toronto Canada M9V 1C1<br>
+          </p>
+        </div>
+      </div>
+      <div class="d-flex mt-5 text-light justify-content-around">
+        <div class="w-100">
+          <p class="w-100 h2 text-center">
+            <span class="">
+              <i class="fas fa-phone" aria-hidden="true"></i>
+            </span>
+          </p>
+          <p class="text-center mt-3 text-capitalize font-weight-bold">
+            +91 9869140080 - India <br>+16476805658 - Canada <br>+44 7500600736 - UK
+          </p>
+        </div>
+        <div class="w-100">
+          <p class="w-100 h2 text-center">
+            <span class="">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+          </p>
+          <p class="text-center mt-3 text-lowercase font-weight-bold">
+            edwin@ed-wings.com <br>travel@ed-wings.com
+          </p>
+        </div>
+      </div>
+      <div class="d-flex mt-5 text-light">
+
+        <p class="h1 m-3 text-center w-100">
+          <span class="m-3">
+            <i class="fab fa-facebook-square" aria-hidden="true"></i>
+          </span>
+          <span class="m-3">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </span>
+          <span class="m-3">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+          </span>
+          <span class="m-3">
+            <i class="fab fa-pinterest-square" aria-hidden="true"></i>
+          </span>
+          <span class="m-3">
+            <i class="fab fa-twitter-square" aria-hidden="true"></i>
+          </span>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <p for="" class=" text-light text-center font-weight-bold h1">Leave Us A Message</p>
+      <br>
+      <br>
+      <form action="index.php" method="post" class="w-75 mx-auto">
+        <div class="form-group">
+          <label for="" class=" text-light text-center font-weight-bold h3 w-100">Your Name</label>
+          <input type="text" name="name" id="" class="form-control form-control-lg bg-transparent rounded-pill" placeholder="" aria-describedby="helpId" style="border-width: 2px;">
+        </div>
+        <div class="form-group">
+          <label for="" class=" text-light text-center font-weight-bold h3 w-100">Contact Number</label>
+          <input type="text" name="contact" id="" class="form-control form-control-lg bg-transparent rounded-pill" placeholder="" aria-describedby="helpId" style="border-width: 2px;">
+        </div>
+        <div class="form-group">
+          <label for="" class=" text-light text-center font-weight-bold h3 w-100">Email Address</label>
+          <input type="text" name="email" id="" class="form-control form-control-lg bg-transparent rounded-pill" placeholder="" aria-describedby="helpId" style="border-width: 2px;">
+        </div>
+        <div class="form-group">
+          <label for="" class=" text-light text-center font-weight-bold h3 w-100">Message</label>
+          <textarea name="massage" class="form-control rounded-lg form-control-lg bg-transparent border-light w-100" id="" rows="5" style="border-width: 2px;"></textarea>
+        </div>
+        <center>
+          <button type="submit" class="btn btn-outline-light btn-lg px-5 font-weight-bold rounded-pill text-uppercase">
+            Level Us a Message
+          </button>
+        </center>
+      </form>
+    </div>
+  </div>
+
+  <!-- <div class="vh-100"></!--> -->
 
   <!-- footer  -->
   <?php include './inc/footer.php'; ?>
@@ -76,7 +459,7 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="./js/swiper.min.js"></script>
   <script>
     var swiper = new Swiper('.swiper-container', {
       slidesPerView: 1,
@@ -94,6 +477,68 @@
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+    });
+
+    var swiper = new Swiper('.swiper-container-2', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      breakpoints: {
+        '@0.00': {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        '@0.75': {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        '@1.00': {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        '@1.50': {
+          slidesPerView: 5,
+          spaceBetween: 10,
+        },
+      },
+      navigation: {
+        nextEl: '.swiper-button-next2',
+        prevEl: '.swiper-button-prev2',
+      },
+    });
+
+    var swiper = new Swiper('.swiper-container-3', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      breakpoints: {
+        '@0.00': {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        '@0.75': {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        '@1.00': {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        '@1.50': {
+          slidesPerView: 5,
+          spaceBetween: 10,
+        },
+      },
+      navigation: {
+        nextEl: '.swiper-button-next-3',
+        prevEl: '.swiper-button-prev-3',
+      },
+    });
+
+    var swiper = new Swiper('.testimonials', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true
     });
   </script>
 </body>
