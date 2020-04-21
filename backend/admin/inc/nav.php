@@ -43,7 +43,7 @@
          <!-- <li class="nav-item active">
             <a class="nav-link text-danger" href="#">Link</a>
           </li> -->
-         <li class="nav-item active dropdown">
+         <!-- <li class="nav-item active dropdown">
            <a class="nav-link text-danger dropdown-toggle" href="#" id="navbarDropdown" role="button"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
              Dropdown
@@ -54,13 +54,13 @@
              <div class="dropdown-divider"></div>
              <a class="dropdown-item" href="#">Something else here</a>
            </div>
-         </li>
-         <li class="nav-item active">
+         </li> -->
+         <!-- <li class="nav-item active">
            <a class="nav-link text-danger" href="./about-us.php">About Us</a>
-         </li>
-         <li class="nav-item active">
+         </li> -->
+         <!-- <li class="nav-item active">
            <a class="nav-link text-danger" href="./contact-us.php">Contact Us</a>
-         </li>
+         </li> -->
        </ul>
        <form class="form-inline my-2 ml-3 my-lg-0">
          <a href="logout.php" class="btn btn-danger my-2 my-sm-0 btn-sm px-4 rounded-pill font-weight-bold text-white"
