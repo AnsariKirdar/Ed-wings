@@ -29,11 +29,8 @@
            <a class="nav-link text-danger" href="#">Package's</a>
          </li>
          <li class="nav-item active">
-           <a class="nav-link text-danger" href="./itinerary.php">Itinerary</a>
-         </li>
-         <li class="nav-item active">
            <a class="nav-link text-danger" href="./blogs.php">Blogs</a>
-         </li>
+         </li> 
          <li class="nav-item active">
            <a class="nav-link text-danger" href="./gallery.php">Gallery</a>
          </li>

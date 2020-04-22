@@ -141,8 +141,8 @@
             <div class="swiper-slide">Slide 10</div>
           </div>
           <!-- Add Arrows -->
-          <div class="swiper-button-next2"></div>
-          <div class="swiper-button-prev2"></div>
+          <div class="text-white swiper-button-next2 swiper-button-next"></div>
+          <div class="text-white swiper-button-prev2 swiper-button-prev"></div>
         </div>
       </div>
     </div>
@@ -166,8 +166,8 @@
             <div class="swiper-slide">Slide 10</div>
           </div>
           <!-- Add Arrows -->
-          <div class="swiper-button-next-3"></div>
-          <div class="swiper-button-prev-3"></div>
+          <div class="text-white swiper-button-next-3 swiper-button-next"></div>
+          <div class="text-white swiper-button-prev-3 swiper-button-prev"></div>
         </div>
       </div>
     </div>
@@ -286,58 +286,91 @@
     <p class="text-uppercase text-white font-weight-bold text-center h1 mb-5 pb-4">
       Testimonials
     </p>
+    <div class="testimonail swiper-container">
+      <div class="swiper-wrapper text-white">
 
-    <div class="w-100 testimonials swiper-container-initialized swiper-container-horizontal">
-      <div class="container">
-        <div class="testimonials swiper-container-initialized swiper-container-horizontal">
-          <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1110px, 0px, 0px);">
-            <div class="swiper-slide swiper-slide-active swiper-slide-duplicate-next swiper-slide-duplicate-prev">
-              <div>
-                <div class="text-white text-center">
-                 <span class="h2"> <i class="fas fa-quote-left" aria-hidden="true"></i></span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
-                  quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
-                  sapiente, quae at et!
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
-                  quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
-                  sapiente, quae at et!
-                 <span class="h2"> <i class="fas fa-quote-right" aria-hidden="true"></i></span>
-                </div>
-                <div class="profile p-1 rounded-circle border-danger text-center my-3">
-                  <img src="https://ibighit.com/txt/images/txt/profile/member-sb.jpg" style="width:80px; border-radius:60px;" alt="">
-                  <p class="text-white mt-3 h4">
-                    Jone Simth
-                  </p>
-                  <p class="small text-white font-weight-bold">
-                    <span>
-                      <span class="text-danger font-weight-bold">
-                        From
-                      </span>
-                      Mumbia , India
-                    </span>
-                    <br>
-                    <span>
-                      <span class="text-danger font-weight-bold">
-                        Trip To
-                      </span>
-                      Spain ,Santiago de Compostela
-                    </span>
-                  </p>
-                </div>
-              </div>
+        <div class="swiper-slide my-5">
+          <div class="mx-auto" style="width:80%;">
+            <div class="text-white text-center">
+              <span class="h1 d-block text-left"><i class="fas fa-quote-left" aria-hidden="true"></i></span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
+              quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
+              sapiente, quae at et!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
+              quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
+              sapiente, quae at et!
+              <span class="h1 d-block text-right"><i class="fas fa-quote-right" aria-hidden="true"></i></span>
             </div>
-           
-          </dv>
-          <!-- Add Pagination -->
-          <div class="swiper-pagination mt-5"></div>
-          <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            <div class="profile p-1 rounded-circle border-danger text-center">
+              <img src="https://ibighit.com/txt/images/txt/profile/member-sb.jpg" style="width:80px; border-radius:60px;" alt="">
+              <p class="text-white mt-3 h4">
+                Jone Simth
+              </p>
+              <p class="small text-white font-weight-bold">
+                <span>
+                  <span class="text-danger font-weight-bold">
+                    From
+                  </span>
+                  Mumbia , India
+                </span>
+                <br>
+                <span>
+                  <span class="text-danger font-weight-bold">
+                    Trip To
+                  </span>
+                  Spain ,Santiago de Compostela
+                </span>
+              </p>
+            </div>
+          </div>
         </div>
+
+        <div class="swiper-slide my-5">
+          <div class="mx-auto" style="width:80%;">
+            <div class="text-white text-center">
+              <span class="h1 d-block text-left"><i class="fas fa-quote-left" aria-hidden="true"></i></span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
+              quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
+              sapiente, quae at et!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
+              quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
+              sapiente, quae at et!
+              <span class="h1 d-block text-right"><i class="fas fa-quote-right" aria-hidden="true"></i></span>
+            </div>
+            <div class="profile p-1 rounded-circle border-danger text-center">
+              <img src="https://ibighit.com/txt/images/txt/profile/member-sb.jpg" style="width:80px; border-radius:60px;" alt="">
+              <p class="text-white mt-3 h4">
+                Jone Simth
+              </p>
+              <p class="small text-white font-weight-bold">
+                <span>
+                  <span class="text-danger font-weight-bold">
+                    From
+                  </span>
+                  Mumbia , India
+                </span>
+                <br>
+                <span>
+                  <span class="text-danger font-weight-bold">
+                    Trip To
+                  </span>
+                  Spain ,Santiago de Compostela
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+
       </div>
-      <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+      <!-- Add Arrows -->
+      <div class="text-white swiper-button-next testimonail-swiper-button-next "></div>
+      <div class="text-white swiper-button-prev testimonail-swiper-button-prev "></div>
+      <!-- Add Pagination -->
+      <div class="swiper-pagination testimonail-swiper-pagination"></div>
     </div>
   </div>
   <div class="d-lg-flex d-md-flex d-sm-block justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column py-5 my-5">
-    <div class="container">
+    <div class="container order-md-1 order-lg-0 order-sm-1 my-4">
       <center>
         <img src="./img/logo/nav-logo.png" width="400px" alt="">
       </center>
@@ -415,7 +448,7 @@
         </p>
       </div>
     </div>
-    <div class="container">
+    <div class="container order-md-0 order-lg-1 order-sm-0 my-4">
       <p for="" class=" text-light text-center font-weight-bold h1">Leave Us A Message</p>
       <br>
       <br>
@@ -535,10 +568,17 @@
       },
     });
 
-    var swiper = new Swiper('.testimonials', {
+    var swiper = new Swiper('.testimonail', {
       slidesPerView: 1,
-      spaceBetween: 30,
-      loop: true
+      spaceBetween: 0,
+      loop: true,
+      pagination: {
+        el: '.testimonail-swiper-pagination'
+      },
+      navigation: {
+        nextEl: '.testimonail-swiper-button-next',
+        prevEl: '.testimonail-swiper-button-prev',
+      },
     });
   </script>
 </body>
