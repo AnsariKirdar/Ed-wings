@@ -126,7 +126,7 @@
       <h1 class="text-center text-white font-weight-bold">
         Top Destinations
       </h1>
-      <div class="top_destination overflow-hidden" id="top_destination">
+      <div class="top_destination overflow-hidden px-5" id="top_destination">
         <div class="swiper-container-2">
           <div class="swiper-wrapper">
             <div class="swiper-slide">Slide 1</div>
@@ -140,9 +140,9 @@
             <div class="swiper-slide">Slide 9</div>
             <div class="swiper-slide">Slide 10</div>
           </div>
-          <!-- Add Arrows -->
-          <div class="text-white swiper-button-next2 swiper-button-next"></div>
-          <div class="text-white swiper-button-prev2 swiper-button-prev"></div>
+          <!-- Add Arrows
+          <div class="text-white swiper-button-next swiper-button-next2"></div>
+          <div class="text-white  swiper-button-prev swiper-button-prev2"></div> -->
         </div>
       </div>
     </div>
@@ -151,7 +151,7 @@
       <h1 class="text-center text-white font-weight-bold">
         Tranding Destinations
       </h1>
-      <div class="top_destination overflow-hidden" id="top_destination">
+      <div class="top_destination overflow-hidden px-5" id="top_destination">
         <div class="swiper-container-3">
           <div class="swiper-wrapper">
             <div class="swiper-slide">Slide 1</div>
@@ -165,9 +165,9 @@
             <div class="swiper-slide">Slide 9</div>
             <div class="swiper-slide">Slide 10</div>
           </div>
-          <!-- Add Arrows -->
-          <div class="text-white swiper-button-next-3 swiper-button-next"></div>
-          <div class="text-white swiper-button-prev-3 swiper-button-prev"></div>
+          <!-- Add Arrows
+          <div class="text-white swiper-button-next swiper-button-next-3"></div>
+          <div class="text-white swiper-button-prev swiper-button-prev-3"></div> -->
         </div>
       </div>
     </div>
@@ -178,42 +178,66 @@
       Ed Wings Explore Interaries
     </h1>
     <div class="row mx-0 px-0 my-4 py-3">
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="card overflow-hidden shadow" style="border-radius:15px;">
-          <div>
-            <img class="card-img-top rounded-0" src="./img/blogs/8fedbcb07981ab25c0076007f11f907fa.jpg" alt="" srcset="">
-          </div>
-          <div class="card-body">
-            <h3 class="text-danger font-weight-bolder">
-              Republic Of Congo Africa
-            </h3>
-            <!-- <h4 class="card-title">Title</h4> -->
-            <p class="text-danger font-weight-bold">
-              7 Days / 6 Nights
-            </p>
-            <p class="text-secondary font-weight-bold my-2">
-              Tracking / Music / Sport +2 More
-            </p>
-            <p class="font-weight-bold text-danger my-2">
-              <span class="h4 font-weight-bolder">
-                <b>
-                  INR 190000
-                </b>
-              </span>
-              <span class="text-secondary small font-weight-bold">
-                Per Person
-              </span>
-            </p>
-            <p class="d-flex justify-content-around">
-              <button class="btn btn btn-danger w-100 mx-1 rounded-pill font-weight-bold">
-                More Detailes
-              </button>
-              <button class="btn btn btn-danger w-100 rounded-pill mx-1 font-weight-bold">
-                Buy Now
-              </button>
-            </p>
-          </div>
-        </div>
+      <?php
+      $result = mysqli_query($conn, "SELECT * FROM `itinerary`ORDER BY rand() LIMIT 12");
+      while ($row = mysqli_fetch_assoc($result)) {
+        $id = $row['id'];
+        $id = bin2hex($id);
+        $title = $row['title'];
+        $description = substr($row['description'], 0, 50) . '...';
+        $img = $row['card_img'];
+        $tags = $row['tags'];
+        $price = $row['price'];
+        $days_place_name = $row['days_place_name'];
+        $days_place_name = explode('-----', $days_place_name);
+        $days_place_name = count($days_place_name);
+        echo '
+<div class="col-lg-3 col-md-4 col-sm-6 my-2">
+  <div class="card overflow-hidden shadow" style="border-radius:15px;">
+    <div>
+      <img class="card-img-top rounded-0" src="./img/Itinerary/' . $img . '" alt="" srcset="">
+    </div>
+    <div class="card-body">
+      <h3 class="text-danger font-weight-bolder my-0">
+        ' . $title . '
+      </h3>
+      <!-- <h4 class="card-title">Title</h4> -->
+      <p class="text-danger font-weight-bold my-0">
+        ' . $days_place_name . ' Days
+      </p>
+      <p class="text-secondary font-weight-bold my-2 my-0">
+       ' . $tags . '
+      </p>
+      <p class="font-weight-bold text-danger my-2 my-0">
+        <span class="h4 font-weight-bolder">
+          <b>
+            USD ' . $price . '/-
+          </b>
+        </span>
+        <span class="text-secondary small font-weight-bold">
+          Per Person
+        </span>
+      </p>
+      <p class="d-flex justify-content-around my-0">
+        <button class="btn btn btn-danger w-100 mx-1 rounded-pill font-weight-bold">
+          More Detailes
+        </button>
+        <button class="btn btn btn-danger w-100 rounded-pill mx-1 font-weight-bold">
+          Buy Now
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
+  ';
+      }
+      ?>
+      <div class="col-lg-12 col-md-12 col-sm-12 my-2">
+        <p class="text-center">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-danger px-5 rounded-pill font-weight-bold">
+            SEE ALL ITINERARIES
+          </a>
+        </p>
       </div>
     </div>
   </div>
@@ -288,85 +312,55 @@
     </p>
     <div class="testimonail swiper-container">
       <div class="swiper-wrapper text-white">
+        <?php
+        $result = mysqli_query($conn, "SELECT * FROM `testimonials`ORDER BY rand() LIMIT 10");
+        while ($row = mysqli_fetch_assoc($result)) {
+          $file = trim($row['file']);
+          $name = $row['name'];
+          $from_city = $row['from_city'];
+          $trip_to = $row['trip_to'];
+          $testimonial = $row['testimonial'];
+          echo '
+  <div class="swiper-slide my-5">
+    <div class="mx-auto" style="width:80%;">
+      <div class="text-white text-center">
+        <span class="h1 d-block text-left"><i class="fas fa-quote-left" aria-hidden="true"></i></span>
+       ' . $testimonial . '
+        <span class="h1 d-block text-right"><i class="fas fa-quote-right" aria-hidden="true"></i></span>
+      </div>
+      <div class="profile p-1 rounded-circle border-danger text-center">
+        <img src="./img/testimonial/' . $file . '" style="width:80px; border-radius:60px;" alt="">
+        <p class="text-white mt-3 h4">
+          ' . $name . '
+        </p>
+        <p class="small text-white font-weight-bold">
+          <span>
+            <span class="text-danger font-weight-bold">
+              From
+            </span>
+           ' . $from_city . '
+          </span>
+          <br>
+          <span>
+            <span class="text-danger font-weight-bold">
+              Trip To
+            </span>
+           ' . $trip_to . '
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+  ';
+        }
+        ?>
 
-        <div class="swiper-slide my-5">
-          <div class="mx-auto" style="width:80%;">
-            <div class="text-white text-center">
-              <span class="h1 d-block text-left"><i class="fas fa-quote-left" aria-hidden="true"></i></span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
-              quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
-              sapiente, quae at et!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
-              quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
-              sapiente, quae at et!
-              <span class="h1 d-block text-right"><i class="fas fa-quote-right" aria-hidden="true"></i></span>
-            </div>
-            <div class="profile p-1 rounded-circle border-danger text-center">
-              <img src="https://ibighit.com/txt/images/txt/profile/member-sb.jpg" style="width:80px; border-radius:60px;" alt="">
-              <p class="text-white mt-3 h4">
-                Jone Simth
-              </p>
-              <p class="small text-white font-weight-bold">
-                <span>
-                  <span class="text-danger font-weight-bold">
-                    From
-                  </span>
-                  Mumbia , India
-                </span>
-                <br>
-                <span>
-                  <span class="text-danger font-weight-bold">
-                    Trip To
-                  </span>
-                  Spain ,Santiago de Compostela
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="swiper-slide my-5">
-          <div class="mx-auto" style="width:80%;">
-            <div class="text-white text-center">
-              <span class="h1 d-block text-left"><i class="fas fa-quote-left" aria-hidden="true"></i></span>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
-              quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
-              sapiente, quae at et!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo officia libero cum. Obcaecati ea,
-              quod dolores, eum necessitatibus dicta mollitia excepturi deserunt iure quis minima reprehenderit
-              sapiente, quae at et!
-              <span class="h1 d-block text-right"><i class="fas fa-quote-right" aria-hidden="true"></i></span>
-            </div>
-            <div class="profile p-1 rounded-circle border-danger text-center">
-              <img src="https://ibighit.com/txt/images/txt/profile/member-sb.jpg" style="width:80px; border-radius:60px;" alt="">
-              <p class="text-white mt-3 h4">
-                Jone Simth
-              </p>
-              <p class="small text-white font-weight-bold">
-                <span>
-                  <span class="text-danger font-weight-bold">
-                    From
-                  </span>
-                  Mumbia , India
-                </span>
-                <br>
-                <span>
-                  <span class="text-danger font-weight-bold">
-                    Trip To
-                  </span>
-                  Spain ,Santiago de Compostela
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
 
       </div>
       <!-- Add Arrows -->
       <div class="text-white swiper-button-next testimonail-swiper-button-next "></div>
       <div class="text-white swiper-button-prev testimonail-swiper-button-prev "></div>
-      <!-- Add Pagination -->
-      <div class="swiper-pagination testimonail-swiper-pagination"></div>
+
     </div>
   </div>
   <div class="d-lg-flex d-md-flex d-sm-block justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column py-5 my-5">
@@ -534,10 +528,10 @@
           spaceBetween: 10,
         },
       },
-      navigation: {
-        nextEl: '.swiper-button-next2',
-        prevEl: '.swiper-button-prev2',
-      },
+      // navigation: {
+      //   nextEl: '.swiper-button-next2',
+      //   prevEl: '.swiper-button-prev2',
+      // },
     });
 
     var swiper = new Swiper('.swiper-container-3', {
@@ -562,10 +556,10 @@
           spaceBetween: 10,
         },
       },
-      navigation: {
-        nextEl: '.swiper-button-next-3',
-        prevEl: '.swiper-button-prev-3',
-      },
+      // navigation: {
+      //   nextEl: '.swiper-button-next-3',
+      //   prevEl: '.swiper-button-prev-3',
+      // },
     });
 
     var swiper = new Swiper('.testimonail', {

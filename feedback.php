@@ -20,7 +20,7 @@
   <!-- Nav Bar -->
 
   <div class=" container mb-5 mt-3 pb-4 pt-4">
-    <img src="./img/banner/feedback-banner.jpg" class="img-fluid rounded-lg" alt="">
+    <img src="./img/banner/feedback-banner.png" class="img-fluid rounded-lg" alt="">
     <p class="h1 my-5 text-center font-weight-bold text-white">
       We Value Your Feedback and Make it feed Forward !
     </p>

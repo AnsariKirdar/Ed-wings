@@ -6,7 +6,7 @@ if (!isset($_GET['s_id'])) {
   $id = hex2bin($id);
   echo$id;
   include '../../dbh/conn.php';
-  $sql = "SELECT `file` FROM `slider`WHERE id='$id";
+  $sql = "SELECT `file` FROM `slider`WHERE id=$id";
   $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
   $file = $row['file'];

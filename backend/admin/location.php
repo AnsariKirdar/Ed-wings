@@ -365,10 +365,10 @@
 
                       <div class="form-group col-lg-12 col-md-12 col-sm-12">
                         <label for="">Itinerary Days Description</label>
-                        <div class="row">
-                          <div class="col-lg-10" id="days">
+                        <div class="row p-0">
+                          <div class="col-lg-10 p-0" id="days">
                             <div class="row" id="">
-                              <div class="col-lg-6 col-md-6 col-sm-10 my-2">
+                              <div class="col-lg-6 col-md-6 col-sm-10 my-2 pr-0">
                                 <input type="text" name="days_place_name[]" class="form-control form-control-lg" placeholder="Place" aria-describedby="helpId">
                                 <p class="text-muted small font-weight-bold px-2">
                                   Please Enter the name of the place you will visit this day
@@ -383,8 +383,8 @@
                             </div>
 
                           </div>
-                          <div class="col-lg-2 col-md-2 col-sm-2 my-2 position-relative">
-                            <div class="position-absolute px-1" style="bottom: 34px; left:0px;">
+                          <div class="col-lg-2 col-md-2 col-sm-2 my-2 position-relative p-0">
+                            <div class="position-absolute pl-1" style="bottom: 34px; left:0px;">
                               <a class="btn btn-block btn-lg btn-danger text-white " id="add_day_description" onclick="add_day_description()">
                                 <i class="fas fa-plus"></i> Add Days
                               </a>
@@ -395,10 +395,10 @@
 
                       <div class="form-group col-lg-12 col-md-12 col-sm-12">
                         <label for="">What's Included?</label>
-                        <div class="row">
-                          <div class="col-lg-10 col-md-10 col-sm-10 my-2">
-                            <div class="row" id="included">
-                              <div class="col-12">
+                        <div class="row m-0 p-0">
+                          <div class="col-lg-10 col-md-10 col-sm-10 my-2 p-0 m-0">
+                            <div class="row p-0" id="included">
+                              <div class="col-12 p-0">
                                 <input type="text" name="included[]" class="form-control form-control-lg my-2">
                                 <p class="text-muted small font-weight-bold px-2">
                                   Pls Describe what is included with this package
@@ -406,8 +406,8 @@
                               </div>
                             </div>
                           </div>
-                          <div class="col-lg-2 col-md-2 col-sm-2 my-3 position-relative">
-                            <div class="position-absolute px-1" style="bottom: 34px; left:0px;">
+                          <div class="col-lg-2 col-md-2 col-sm-2 my-3 position-relative p-0 pl-3">
+                            <div class="position-absolute pl-1" style="bottom: 34px; left:0px;">
                               <a class="btn btn-block btn-lg btn-danger text-white" onclick="add_included()">
                                 <i class="fas fa-plus"></i> Add More
                               </a>
@@ -578,15 +578,15 @@
                                   </b>
                                 </p>
                               <p class="text-center my-2 mt-3">
-                                <button class="btn btn-block btn-primary px-5 rounded-pill font-weight-bold ">
+                                <button class="btn btn-block btn-primary rounded-pill font-weight-bold ">
                                   <i class="fas fa-plus"></i> Add Gallery Image
                                 </button>
                               </p>
                               <p class="text-center my-2 d-flex">
-                                <a href="#" class="btn btn-success px-5 rounded-pill w-100 mr-1 font-weight-bold  ">
+                                <a href="#" class="btn btn-success rounded-pill w-100 mr-1 font-weight-bold">
                                   <i class="fas fa-pen-alt"></i> Update
                                 </a>
-                                <a href="./itinerary-delete.php?id='.$id.'" class="btn btn-danger px-5 rounded-pill w-100 ml-1 font-weight-bold ">
+                                <a href="./itinerary-delete.php?id='.$id.'" class="btn btn-danger rounded-pill w-100 ml-1 font-weight-bold ">
                                   <i class="fas fa-trash-alt"></i> Delete
                                 </a>
                               </p>
