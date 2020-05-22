@@ -219,9 +219,9 @@
         </span>
       </p>
       <p class="d-flex justify-content-around my-0">
-        <button class="btn btn btn-danger w-100 mx-1 rounded-pill font-weight-bold">
-          More Detailes
-        </button>
+        <a href="itinerary.php?q='. $id.'" class="btn btn btn-danger w-100 mx-1 rounded-pill font-weight-bold">
+          More Detail\'s
+        </a>
         <button class="btn btn btn-danger w-100 rounded-pill mx-1 font-weight-bold">
           Buy Now
         </button>
