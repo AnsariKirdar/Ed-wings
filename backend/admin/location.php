@@ -586,7 +586,7 @@
                                 <a href="#" class="btn btn-success rounded-pill w-100 mr-1 font-weight-bold">
                                   <i class="fas fa-pen-alt"></i> Update
                                 </a>
-                                <a href="./itinerary-delete.php?id='.$id.'" class="btn btn-danger rounded-pill w-100 ml-1 font-weight-bold ">
+                                <a href="./itinerary-delete.php?lid='.$id.'" class="btn btn-danger rounded-pill w-100 ml-1 font-weight-bold ">
                                   <i class="fas fa-trash-alt"></i> Delete
                                 </a>
                               </p>

@@ -149,7 +149,7 @@
 
     <div class="container my-5">
       <h1 class="text-center text-white font-weight-bold">
-        Tranding Destinations
+        Trending Destinations
       </h1>
       <div class="top_destination overflow-hidden px-5" id="top_destination">
         <div class="swiper-container-3">
@@ -175,7 +175,7 @@
 
   <div class="bg-white my-5 py-5">
     <h1 class="text-center text-black font-weight-bold">
-      Ed Wings Explore Interaries
+      Explore Ed-Wings Itineraries
     </h1>
     <div class="row mx-0 px-0 my-4 py-3">
       <?php

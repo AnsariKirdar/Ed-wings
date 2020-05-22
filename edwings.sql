@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2020 at 06:03 PM
+-- Generation Time: May 22, 2020 at 02:24 AM
 -- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.29
+-- PHP Version: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,13 +20,13 @@ SET time_zone = "+00:00";
 --
 -- Database: `edwings`
 --
-CREATE DATABASE IF NOT EXISTS `edwings` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `edwings`;
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `blogs`
+--
+-- Creation: Apr 19, 2020 at 08:57 PM
 --
 
 DROP TABLE IF EXISTS `blogs`;
@@ -38,29 +38,26 @@ CREATE TABLE `blogs` (
   `file` varchar(255) DEFAULT NULL,
   `likes` int(11) DEFAULT 0,
   `views` int(11) DEFAULT 0,
-  `data` varchar(255) DEFAULT current_timestamp(),
+  `data` datetime DEFAULT current_timestamp(),
   `header_img` varchar(255) NOT NULL DEFAULT 'Banner.png',
   `c_by` varchar(255) DEFAULT NULL,
   `c_date` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Truncate table before insert `blogs`
---
-
-TRUNCATE TABLE `blogs`;
---
 -- Dumping data for table `blogs`
 --
 
 INSERT INTO `blogs` (`id`, `title`, `sub_title`, `content`, `file`, `likes`, `views`, `data`, `header_img`, `c_by`, `c_date`) VALUES
-(3, 'Tour to Paris', 'Tour Kirdar', '<p><span style=\"text-align: justify;\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aut nihil suscipit, esse quod tempore voluptates tempora odio illo, facilis culpa fugiat vero excepturi! Voluptas, modi? Alias voluptates aliquam eligendi enim blanditiis necessitatibus labore? Nostrum nulla unde alias quidem iste eligendi libero voluptas perferendis aliquid repellendus iure tempore rerum eum dignissimos dolorem, aliquam ut est maiores quia suscipit doloremque itaque esse consequuntur labore? Dolorem alias asperiores suscipit rem adipisci, cum saepe corporis blanditiis facilis architecto sit officia vel aliquid iure impedit illum nostrum repellendus perferendis numquam maiores placeat id reiciendis neque. Esse, dolor vel quidem ratione incidunt recusandae deserunt temporibus.</span><br style=\"text-align: justify;\"><br style=\"text-align: justify;\"><span style=\"text-align: justify;\">            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aut nihil suscipit, esse quod tempore voluptates tempora odio illo, facilis culpa fugiat vero excepturi! Voluptas, modi? Alias voluptates aliquam eligendi enim blanditiis necessitatibus labore? Nostrum nulla unde alias quidem iste eligendi libero voluptas perferendis aliquid repellendus iure tempore rerum eum dignissimos dolorem, aliquam ut est maiores quia suscipit doloremque itaque esse consequuntur labore? Dolorem alias asperiores suscipit rem adipisci, cum saepe corporis blanditiis facilis architecto sit officia vel aliquid iure impedit illum nostrum repellendus perferendis numquam maiores placeat id reiciendis neque. Esse, dolor vel quidem ratione incidunt recusandae deserunt temporibus.</span><br></p>', '8fedbcb07981ab25c0076007f11f907fa.jpg', 2, 39, 'Sunday 19-April-2020', 'Banner.png', 'c_by', '2020-04-19 22:16:18'),
-(4, 'Taj Mahal', 'Kirar Sub Tilte', '123', '613b7f954fa87dd5dc676efe358bd950a.jpg', 1, 1, 'Monday 20-April-2020', 'Banner.png', 'Kirdar', '2020-04-20 19:51:42');
+(3, 'Tour to Paris', 'Tour Kirdar', '<p><span style=\"text-align: justify; font-size: 24px;\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aut nihil suscipit, esse quod tempore voluptates tempora odio illo, facilis culpa fugiat vero excepturi! Voluptas, modi? Alias voluptates aliquam eligendi enim blanditiis necessitatibus labore? Nostrum nulla unde alias quidem iste eligendi libero voluptas perferendis aliquid repellendus iure tempore rerum eum dignissimos dolorem, aliquam ut est maiores quia suscipit doloremque itaque esse consequuntur labore? Dolorem alias asperiores suscipit rem adipisci, cum saepe corporis blanditiis facilis architecto sit officia vel aliquid iure impedit illum nostrum repellendus perferendis numquam maiores placeat id reiciendis neque. Esse, dolor vel quidem ratione incidunt recusandae deserunt temporibus.</span><br style=\"text-align: justify;\"><br style=\"text-align: justify;\"><span style=\"text-align: justify;\">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style=\"font-size: 24px;\"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae aut nihil suscipit, esse quod tempore voluptates tempora odio illo, facilis culpa fugiat vero excepturi! Voluptas, modi? Alias voluptates aliquam eligendi enim blanditiis necessitatibus labore? Nostrum nulla unde alias quidem iste eligendi libero voluptas perferendis aliquid repellendus iure tempore rerum eum dignissimos dolorem, aliquam ut est maiores quia suscipit doloremque itaque esse consequuntur labore? Dolorem alias asperiores suscipit rem adipisci, cum saepe corporis blanditiis facilis architecto sit officia vel aliquid iure impedit illum nostrum repellendus perferendis numquam maiores placeat id reiciendis neque. Esse, dolor vel quidem ratione incidunt recusandae deserunt temporibus.</span></span><br></p>', '8fedbcb07981ab25c0076007f11f907fa.jpg', 2, 39, '0000-00-00 00:00:00', 'Banner.png', 'c_by', '2020-04-19 22:16:18'),
+(4, 'Taj Mahal', 'Kirar Sub Tilte', '123', '613b7f954fa87dd5dc676efe358bd950a.jpg', 1, 1, '0000-00-00 00:00:00', 'Banner.png', 'Kirdar', '2020-04-20 19:51:42');
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `blogs_gallery`
+--
+-- Creation: Apr 20, 2020 at 04:04 PM
 --
 
 DROP TABLE IF EXISTS `blogs_gallery`;
@@ -71,11 +68,6 @@ CREATE TABLE `blogs_gallery` (
   `c_date` datetime(6) DEFAULT current_timestamp(6)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Truncate table before insert `blogs_gallery`
---
-
-TRUNCATE TABLE `blogs_gallery`;
 --
 -- Dumping data for table `blogs_gallery`
 --
@@ -88,7 +80,37 @@ INSERT INTO `blogs_gallery` (`id`, `blogs_id`, `file`, `c_date`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `brochure`
+--
+-- Creation: Apr 30, 2020 at 08:40 PM
+--
+
+DROP TABLE IF EXISTS `brochure`;
+CREATE TABLE `brochure` (
+  `id` int(11) NOT NULL,
+  `packages` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `image_File` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `c_by` varchar(255) DEFAULT NULL,
+  `e_by` varchar(255) DEFAULT NULL,
+  `c_date` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `brochure`
+--
+
+INSERT INTO `brochure` (`id`, `packages`, `file`, `image_File`, `title`, `c_by`, `e_by`, `c_date`) VALUES
+(1, '5', '3590a9c4c36da056836ba77f10744338a.pdf', '3590a9c4c36da056836ba77f10744338a.jpg', 'Goa', 'Kirdar', NULL, '2020-05-01 02:25:13'),
+(3, '3', 'a584de0014d587f6408fa45e1214b8b2a.pdf', 'a584de0014d587f6408fa45e1214b8b2a.jpg', 'Tour to Paris', 'Kirdar', NULL, '2020-05-01 02:46:24');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `continent`
+--
+-- Creation: Apr 18, 2020 at 09:23 PM
 --
 
 DROP TABLE IF EXISTS `continent`;
@@ -101,11 +123,6 @@ CREATE TABLE `continent` (
   `c_date` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Truncate table before insert `continent`
---
-
-TRUNCATE TABLE `continent`;
 --
 -- Dumping data for table `continent`
 --
@@ -124,6 +141,8 @@ INSERT INTO `continent` (`id`, `continents`, `description`, `c_by`, `e_by`, `c_d
 --
 -- Table structure for table `country`
 --
+-- Creation: Apr 18, 2020 at 09:23 PM
+--
 
 DROP TABLE IF EXISTS `country`;
 CREATE TABLE `country` (
@@ -136,11 +155,6 @@ CREATE TABLE `country` (
   `c_date` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Truncate table before insert `country`
---
-
-TRUNCATE TABLE `country`;
 --
 -- Dumping data for table `country`
 --
@@ -168,6 +182,8 @@ INSERT INTO `country` (`id`, `continents`, `country`, `description`, `c_by`, `e_
 --
 -- Table structure for table `customer_feedback`
 --
+-- Creation: Apr 30, 2020 at 09:42 PM
+--
 
 DROP TABLE IF EXISTS `customer_feedback`;
 CREATE TABLE `customer_feedback` (
@@ -184,30 +200,25 @@ CREATE TABLE `customer_feedback` (
   `recommend_friends` varchar(3) DEFAULT NULL,
   `suggestions` longtext DEFAULT NULL,
   `ip` varchar(30) DEFAULT NULL,
-  `c_date` datetime NOT NULL DEFAULT current_timestamp()
+  `c_date` datetime NOT NULL DEFAULT current_timestamp(),
+  `viewed` int(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Truncate table before insert `customer_feedback`
---
-
-TRUNCATE TABLE `customer_feedback`;
 --
 -- Dumping data for table `customer_feedback`
 --
 
-INSERT INTO `customer_feedback` (`id`, `name`, `office_name`, `next_destination`, `destination_visited`, `departure_date`, `telephone`, `mobile`, `email`, `travel_again`, `recommend_friends`, `suggestions`, `ip`, `c_date`) VALUES
-(1, 'Kirdar', 'XYZ', NULL, 'America', '2020-04-03', 'Telephone', 'Mobile', 'anwerahmed1771998@gmail.com', 'on', 'on', 'aaaaaa', '', '2020-04-03 01:18:53'),
-(2, 'Kirdar', 'XYZ', NULL, 'America', '2020-04-03', 'Telephone', 'Mobile', 'anwerahmed1771998@gmail.com', 'on', 'on', 'aaaaaa', '', '2020-04-03 01:19:29'),
-(3, 'Kirdar', 'XYZ', NULL, 'America', '2020-04-03', 'Telephone', 'Mobile', 'anwerahmed1771998@gmail.com', 'on', 'on', 'aaaaaa', '', '2020-04-03 01:20:35'),
-(4, 'amitkchaudhary', 'XYZ', NULL, 'America', '2020-04-10', '8652434063', '86524343', '4545@gmail.com', 'on', 'on', 'aaaa', '', '2020-04-03 01:25:40'),
-(5, 'amitkchaudhary', 'XYZ', 'demo-country', 'America', '2020-04-16', '865243', '434666', 'ansarifarid12112001@gmail.com', 'on', 'on', 'aaaaaaa', '', '2020-04-03 01:28:55'),
-(6, 'amitkchaudhary', 'XYZaaa', 'demo-country', 'America', '2020-04-15', '86', '52', 'edovk9q@upcmaill.com', 'Yes', 'Yes', 'aaa', '::1', '2020-04-03 01:31:25');
+INSERT INTO `customer_feedback` (`id`, `name`, `office_name`, `next_destination`, `destination_visited`, `departure_date`, `telephone`, `mobile`, `email`, `travel_again`, `recommend_friends`, `suggestions`, `ip`, `c_date`, `viewed`) VALUES
+(1, 'Kirdar', 'XYZ', NULL, 'America', '2020-04-03', 'Telephone', 'Mobile', 'anwerahmed1771998@gmail.com', 'on', 'on', 'aaaaaa', '', '2020-04-03 01:18:53', 0),
+(4, 'amitkchaudhary', 'XYZ', NULL, 'America', '2020-04-10', '8652434063', '86524343', '4545@gmail.com', 'on', 'on', 'aaaa', '', '2020-04-03 01:25:40', 0),
+(5, 'amitkchaudhary', 'XYZ', 'demo-country', 'America', '2020-04-16', '865243', '434666', 'ansarifarid12112001@gmail.com', 'on', 'on', 'aaaaaaa', '', '2020-04-03 01:28:55', 0);
 
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `gallery`
+--
+-- Creation: Apr 18, 2020 at 09:23 PM
 --
 
 DROP TABLE IF EXISTS `gallery`;
@@ -221,11 +232,6 @@ CREATE TABLE `gallery` (
   `c_date` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Truncate table before insert `gallery`
---
-
-TRUNCATE TABLE `gallery`;
 --
 -- Dumping data for table `gallery`
 --
@@ -245,7 +251,52 @@ INSERT INTO `gallery` (`id`, `title`, `thumb`, `full_img`, `u_by`, `e_date`, `c_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `itinerary`
+--
+-- Creation: Apr 22, 2020 at 08:57 PM
+--
+
+DROP TABLE IF EXISTS `itinerary`;
+CREATE TABLE `itinerary` (
+  `id` int(11) NOT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `description` longtext DEFAULT NULL,
+  `days_place_name` longtext DEFAULT NULL,
+  `days_place_decs` longtext DEFAULT NULL,
+  `card_img` varchar(255) DEFAULT NULL,
+  `header_img` varchar(255) DEFAULT NULL,
+  `accommodation` varchar(255) DEFAULT NULL,
+  `meals` varchar(255) DEFAULT NULL,
+  `transportation` varchar(255) DEFAULT NULL,
+  `visa` varchar(255) DEFAULT NULL,
+  `included` longtext DEFAULT NULL,
+  `activity_level` int(11) DEFAULT NULL,
+  `group_size_min` int(4) DEFAULT NULL,
+  `group_size_max` int(4) DEFAULT NULL,
+  `group_size_avg` int(4) DEFAULT NULL,
+  `travel_type` varchar(255) DEFAULT NULL,
+  `tags` varchar(255) DEFAULT NULL,
+  `add_by` varchar(255) DEFAULT NULL,
+  `continents` varchar(255) DEFAULT NULL,
+  `country` varchar(255) DEFAULT NULL,
+  `price` int(11) DEFAULT NULL,
+  `e_date` datetime DEFAULT NULL,
+  `c_date` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `itinerary`
+--
+
+INSERT INTO `itinerary` (`id`, `title`, `description`, `days_place_name`, `days_place_decs`, `card_img`, `header_img`, `accommodation`, `meals`, `transportation`, `visa`, `included`, `activity_level`, `group_size_min`, `group_size_max`, `group_size_avg`, `travel_type`, `tags`, `add_by`, `continents`, `country`, `price`, `e_date`, `c_date`) VALUES
+(2, 'Kenya Tour', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, nam eius tenetur distinctio perferendis modi ab necessitatibus beatae minus deserunt, maxime inventore quidem facere totam veniam sunt voluptate fuga porro dicta? Dolorem quasi error voluptatem? Qui et expedita ab magnam debitis reiciendis recusandae. Sint veritatis error optio ab amet consequatur adipisci fugit non dignissimos quisquam. At sed, animi quo consequuntur eos aliquam asperiores recusandae eius enim quos odio, perferendis quod nemo, dolore minus nobis rerum aliquid magni. Culpa nostrum hic quod eum rerum veniam vero pariatur recusandae, perspiciatis aspernatur accusamus optio praesentium expedita architecto laudantium, obcaecati, maiores dicta alias fugit in quia ullam consequatur? Optio libero itaque laudantium nisi voluptatum alias id, hic quos voluptates ipsa aliquid iusto saepe fugiat corrupti reiciendis praesentium quibusdam harum necessitatibus, doloribus error tempora? Consequuntur repellat, corrupti officia cum labore volupta', 'Kenya Tour 1-----Kenya Tour 2-----Kenya Tour 3-----Kenya Tour 4-----Kenya Tour 5-----Kenya Tour 6-----Kenya Tour 7', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.-----Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.-----Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.-----Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.-----Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.-----Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.-----Lorem ipsum dolor, sit amet consectetur adipisicing elit.Lorem ipsum dolor, sit amet consectetur adipisicing elit.', '6d316ebc2e2ec35ab14e6455375d52dba.jpg', '6d316ebc2e2ec35ab14e6455375d52dba.jpg', 'yes accommodations', 'yes meals veg', 'yes transportation luxury car', 'on arrival', 'What Included Kenya line 1-----What Included Kenya line 2-----What Included Kenya line 3-----What Included Kenya line 4-----What Included Kenya line 5', 5, 5, 10, 8, 'Flight', 'Cycling , Climbing , Swing , Boating', 'Kirdar', 'Africa', 'Kenya', 300, NULL, '2020-04-23 02:47:06');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `like_log`
+--
+-- Creation: Apr 19, 2020 at 08:14 PM
 --
 
 DROP TABLE IF EXISTS `like_log`;
@@ -255,11 +306,6 @@ CREATE TABLE `like_log` (
   `bid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Truncate table before insert `like_log`
---
-
-TRUNCATE TABLE `like_log`;
 --
 -- Dumping data for table `like_log`
 --
@@ -273,6 +319,8 @@ INSERT INTO `like_log` (`id`, `ip`, `bid`) VALUES
 
 --
 -- Table structure for table `login`
+--
+-- Creation: Apr 18, 2020 at 09:23 PM
 --
 
 DROP TABLE IF EXISTS `login`;
@@ -290,11 +338,6 @@ CREATE TABLE `login` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `login`
---
-
-TRUNCATE TABLE `login`;
---
 -- Dumping data for table `login`
 --
 
@@ -304,7 +347,52 @@ INSERT INTO `login` (`id`, `name`, `username`, `password`, `email`, `f_password`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `news_letter`
+--
+-- Creation: Apr 30, 2020 at 11:32 PM
+--
+
+DROP TABLE IF EXISTS `news_letter`;
+CREATE TABLE `news_letter` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `c_date` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `packages`
+--
+-- Creation: Apr 30, 2020 at 07:12 PM
+--
+
+DROP TABLE IF EXISTS `packages`;
+CREATE TABLE `packages` (
+  `id` int(11) NOT NULL,
+  `packages` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `c_by` varchar(255) DEFAULT NULL,
+  `e_by` varchar(255) DEFAULT NULL,
+  `c_date` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `packages`
+--
+
+INSERT INTO `packages` (`id`, `packages`, `file`, `description`, `c_by`, `e_by`, `c_date`) VALUES
+(3, 'Duniya Dekho', '6b2ae4b66556ae6ccfd0e27b38b5a8632dfa063a423f6fac0b1b29d9a1b30086a.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corrupti natus reprehenderit culpa dolores nisi quidem sapiente, ipsam sunt voluptatem odio quibusdam? Pariatur deserunt quae facilis molestiae saepe est. Maiores.', 'Kirdar', NULL, '2020-05-01 01:05:48'),
+(4, 'Flexihol', '462c4e7b629c5f27047e09b3afdfce44998ecb42e678a39090831884cb6283eba.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corrupti natus reprehenderit culpa dolores nisi quidem sapiente, ipsam sunt voluptatem odio quibusdam? Pariatur deserunt quae facilis molestiae saepe est. Maiores.', 'Kirdar', NULL, '2020-05-01 01:06:06'),
+(5, 'Bharat Deko', 'dacd9f056c52c749e208850d6a157729f7c123a978e7ef168924e9fe7c441800a.jpg', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, nam eius tenetur distinctio perferendis modi ab necessitatibus beatae minus deserunt, maxime inventore quidem facere totam veniam sunt voluptate fuga porro dicta? Dolorem quasi error volupta', 'Kirdar', NULL, '2020-05-01 01:07:35');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `slider`
+--
+-- Creation: Apr 18, 2020 at 09:23 PM
 --
 
 DROP TABLE IF EXISTS `slider`;
@@ -321,24 +409,47 @@ CREATE TABLE `slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Truncate table before insert `slider`
---
-
-TRUNCATE TABLE `slider`;
---
 -- Dumping data for table `slider`
 --
 
 INSERT INTO `slider` (`id`, `title`, `description`, `link`, `link_text`, `file`, `c_by`, `e_by`, `c_date`) VALUES
 (8, 'Mountain Climbing', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, nam eius tenetur distinctio perferendis modi ab necessitatibus beatae minus deserunt, maxime inventore quidem facere totam veniam sunt voluptate fuga porro dicta? Dolorem quasi error volupta', 'Kirdar', 'Best Deal', 'b898dd2511c21ca869bd3aca3d9f70c6photo-1508558936510-0af1e3cccbab.jpg', '', 'Kirdar', '0000-00-00 00:00:00'),
-(13, 'Dubai', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, nam eius tenetur distinctio perferendis modi ab necessitatibus beatae minus deserunt, maxime inventore quidem facere totam veniam sunt voluptate fuga porro dicta? Dolorem quasi error volupta', 'Kirdar', 'Book Now', 'e3d426fb2cc81c5fc06cd1bf99347523photo-1462007895615-c8c073bebcd8.jpg', '', 'Kirdar', '0000-00-00 00:00:00'),
-(16, 'Prias', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corrupti natus reprehenderit culpa dolores nisi quidem sapiente, ipsam sunt voluptatem odio quibusdam? Pariatur deserunt quae facilis molestiae saepe est. Maiores.', 'Kirdar', 'Book Now', '0a34dfe740ebdb6607e8b25eaa9a03b9photo-1502602898657-3e91760cbb34.png', 'Kirdar', 'Kirdar', '2020-04-16 04:28:46'),
+(16, 'Prias', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, corrupti natus reprehenderit culpa dolores nisi quidem sapiente, ipsam sunt voluptatem odio quibusdam? Pariatur deserunt quae facilis molestiae saepe est. Maiores.', 'Kirdar', 'Book Now', 'd833fdcdcd4b459df61798329c6b99b7a.png', 'Kirdar', 'Kirdar', '2020-04-16 04:28:46'),
 (22, 'Taj Mahal', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum, nam eius tenetur distinctio perferendis modi ab necessitatibus beatae minus deserunt, maxime inventore quidem facere totam veniam sunt voluptate fuga porro dicta? Dolorem quasi error volupta', 'Kirdar', 'Book Now', '7dbc23d724d7beef76e443dabde439eca.jpg', 'Kirdar', NULL, '2020-04-18 23:49:09');
 
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `testimonials`
+--
+-- Creation: Apr 22, 2020 at 11:15 PM
+--
+
+DROP TABLE IF EXISTS `testimonials`;
+CREATE TABLE `testimonials` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `from_city` varchar(255) DEFAULT NULL,
+  `trip_to` varchar(255) DEFAULT NULL,
+  `testimonial` longtext DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
+  `c_date` datetime DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `testimonials`
+--
+
+INSERT INTO `testimonials` (`id`, `name`, `from_city`, `trip_to`, `testimonial`, `file`, `c_date`) VALUES
+(2, 'Kirdar 3', 'Mumbai, India', 'Prais', 'Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem', '80f9f34e2a95545d398fa5e2295f9a9ba.jpg', '2020-04-23 04:49:39'),
+(3, 'Kirdar', 'Mumbai, India', 'Prais', 'Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem', '80f9f34e2a95545d398fa5e2295f9a9ba.jpg', '2020-04-23 04:49:39');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `views_log`
+--
+-- Creation: Apr 19, 2020 at 08:18 PM
 --
 
 DROP TABLE IF EXISTS `views_log`;
@@ -348,11 +459,6 @@ CREATE TABLE `views_log` (
   `bid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Truncate table before insert `views_log`
---
-
-TRUNCATE TABLE `views_log`;
 --
 -- Dumping data for table `views_log`
 --
@@ -375,6 +481,12 @@ ALTER TABLE `blogs`
 -- Indexes for table `blogs_gallery`
 --
 ALTER TABLE `blogs_gallery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `brochure`
+--
+ALTER TABLE `brochure`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -402,6 +514,12 @@ ALTER TABLE `gallery`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `itinerary`
+--
+ALTER TABLE `itinerary`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `like_log`
 --
 ALTER TABLE `like_log`
@@ -414,9 +532,27 @@ ALTER TABLE `login`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `news_letter`
+--
+ALTER TABLE `news_letter`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `packages`
+--
+ALTER TABLE `packages`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `slider`
 --
 ALTER TABLE `slider`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -439,6 +575,12 @@ ALTER TABLE `blogs`
 -- AUTO_INCREMENT for table `blogs_gallery`
 --
 ALTER TABLE `blogs_gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `brochure`
+--
+ALTER TABLE `brochure`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
@@ -466,6 +608,12 @@ ALTER TABLE `gallery`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
+-- AUTO_INCREMENT for table `itinerary`
+--
+ALTER TABLE `itinerary`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `like_log`
 --
 ALTER TABLE `like_log`
@@ -478,10 +626,28 @@ ALTER TABLE `login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `news_letter`
+--
+ALTER TABLE `news_letter`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `packages`
+--
+ALTER TABLE `packages`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+
+--
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `views_log`
