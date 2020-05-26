@@ -1,0 +1,69 @@
+$message = "
+<!doctype html>
+<html lang='en'>
+
+<head>
+    <title>Title</title>
+    <style>
+        .bg-danger {
+            background-color: red !important;
+        }
+        
+        .text-white {
+            color: #fff;
+        }
+        
+        .font-italic {
+            font-style: italic;
+        }
+        
+        .font-weight-bold {
+            font-weight: bold;
+        }
+        
+        .h5 {
+            font-size: x-large;
+            font-family: Monospace;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        
+        .text-muted {
+            color: #666;
+        }
+        
+        .jumbotron {
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 10px;
+        }
+        
+        .container {
+            padding: 20px;
+        }
+        
+        .contact {
+            padding: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: large;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='jumbotron bg-danger'>
+            <h1 class='text-white display-3 font-italic font-weight-bold'><img src='http://ed-wings.com/asset/img/logo.png' height='40px' alt='' srcset=''> Ed-wings Email verification</h1>
+        </div>
+        <p class='h5 text-muted'>Dear $name, <br><br><br> Thank you for showing interest in Ed-wings.com. Please click on this <a href='#'>emailverification link</a> to proceed with your account verification.Or use this OTP $otp<br><br> Please do not share the link with anyone
+            else.<br><br><br> Regards,<br> Team Ed-wings</p>
+        <div class='bg-danger contact px-4 py-2 text-white font-weight-bold'>Contact info</div>
+    </div>
+</body>
+
+</html>
+";

@@ -43,7 +43,7 @@
       font-weight: bold;
     }
 
-    .btn-tra{
+    .btn-tra {
       background-color: rgba(255, 255, 255, .1);
       height: 45px;
       border: none;
@@ -55,7 +55,7 @@
       text-transform: uppercase;
     }
 
-    .btn-tra:hover{
+    .btn-tra:hover {
       background-color: rgba(255, 255, 255, .2);
       height: 45px;
       border: none;
@@ -77,18 +77,30 @@
   <div class="d-flex justify-content-center align-items-center h-100">
     <div class="verify d-flex justify-content-center align-items-center">
       <div>
+        <?php
+        include './msg.php';
+        include './conn.php';
+        $v = mysqli_real_escape_string($conn, hex2bin($_GET['v']));
+        $sql = "SELECT * FROM `user_unverified` WHERE `email` = '$v' limit 1";
+        $result  = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $name = $row['name'];
+        $mail = $row['email'];
+        ?>
         <h1 class="text-center">
           Verify Email
         </h1>
         <p class="text-center">
           OTP is been Send to your mail Pls Open and Entry the OTP
         </p>
-        <form action="#" method="get">
+        <form action="./../activateuser.php" method="get">
           <div class="form-group my-4">
             <p class="text-center h5 mb-3">
-              User Name
+              <?php echo $name; ?>
             </p>
-            <input type="text" name="" id="" class="form-control" placeholder="OTP" aria-describedby="helpId">
+            <input type="text" name="c" id="" class="form-control" placeholder="OTP" aria-describedby="helpId">
+            <input type="text" name="m" id="" hidden value="<?php echo $mail; ?>" class="form-control" placeholder="OTP" aria-describedby="helpId">
+            <input type="text" name="t" id="" hidden value="f" class="form-control" placeholder="OTP" aria-describedby="helpId">
           </div>
           <div class="form-group">
             <button class="btn btn-tra btn-block">

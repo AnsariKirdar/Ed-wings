@@ -39,9 +39,10 @@
            <a class="nav-link text-danger" href="./contact-us.php">Contact Us</a>
          </li>
        </ul>
-       <form class="form-inline my-2 ml-3 my-lg-0">
-         <a href="./login.php" class="btn btn-danger my-2 my-sm-0 btn-sm px-4 rounded-pill font-weight-bold" type="submit">Login /
-           Sign up</a>
+       <form class="form-inline my-2 ml-3 my-lg-0" action="./trips.php" method="GET">
+         <input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Search" name="s" aria-label="Search" style="background-color: #fff !important; color:black; font-weight:normal;">
+         <button class="btn btn-success font-weight-bold my-2 my-sm-0 px-5 rounded-pill" type="submit">Search</button>
+         <a href="./login.php" class="btn btn-danger my-2 my-sm-0 px-4 rounded-pill font-weight-bold mx-2 mr-4">Login /Sign up</a>
        </form>
      </div>
    </nav>

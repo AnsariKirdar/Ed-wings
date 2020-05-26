@@ -65,7 +65,7 @@
                 <input type="password" name="password" id="" class="form-control" placeholder="" aria-describedby="helpId" required autocomplete="off">
               </div>
               <div class="form-group mt-4 mb-3">
-                <input type="submit" name="login_submit" id="" class="btn btn-danger btn-block rounded-pill btn-lg" value="Login" placeholder="" aria-describedby="helpId">
+                <input type="submit" name="login_submit" id="" class="btn btn-light font-weight-bold btn-block rounded-pill btn-lg" value="Login" placeholder="" aria-describedby="helpId">
               </div>
               <div class="form-group">
                 <a href="#" class="">
@@ -99,7 +99,7 @@
                 <input type="text" name="pass2" id="" class="form-control" placeholder="" aria-describedby="helpId" required autocomplete="off" required>
               </div>
               <div class="form-group mt-4 mb-3">
-                <input type="submit" name="cust_sign_up" id="" class="btn btn-danger btn-block rounded-pill btn-lg" placeholder="" value="Create your Edwings account" aria-describedby="helpId">
+                <input type="submit" name="cust_sign_up" id="" class="btn btn-light font-weight-bold btn-block rounded-pill btn-lg" placeholder="" value="Create your Edwings account" aria-describedby="helpId">
               </div>
               <div class="form-group px-2 pt-3 mb-0">
                 <p class="small">
