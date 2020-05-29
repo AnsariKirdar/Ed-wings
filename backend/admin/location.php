@@ -500,14 +500,13 @@
                       <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="">Card Image</label>
                         <input type="file" name="card_img" class="form-control form-control-lg form-control-file" required>
-                        <small id="helpId" class="text-muted">We suggest the slider should be the 1900px x 710px and
-                          under 700kb for better experience</small>
+                        <small id="helpId" class="text-muted">
+                          We suggest the slider should be the 443px x 276px and under 700kb for better experience</small>
                       </div>
                       <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="">Header Image</label>
                         <input type="file" name="header" class="form-control form-control-lg form-control-file" required>
-                        <small id="helpId" class="text-muted">We suggest the slider should be the 1900px x 710px and
-                          under 700kb for better experience</small>
+                        <small id="helpId" class="text-muted">We suggest the slider should be the 1100px x 300px and under 700kb for better experience</small>
                       </div>
                       <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
                         <label for=""></label>
@@ -555,26 +554,26 @@
                         $id = $row['id'];
                         $id = bin2hex($id);
                         $title = $row['title'];
-                        $description = substr($row['description'],0,50).'...';
+                        $description = substr($row['description'], 0, 50) . '...';
                         $img = $row['card_img'];
                         $price = $row['price'];
                         $days_place_name = $row['days_place_name'];
-                        $days_place_name = explode('-----', $days_place_name  );
+                        $days_place_name = explode('-----', $days_place_name);
                         $days_place_name = count($days_place_name);
-                        
+
                         echo '
                         <div class="col-6">
                           <div class="card overflow-hidden border-0 shadow" style="border-radius: 12px;">
-                            <img class="card-img-top" src="./../../img/Itinerary/'.$img. '" alt="">
+                            <img class="card-img-top" src="./../../img/Itinerary/' . $img . '" alt="">
                             <div class="card-body p-2 pt-2 pb-3">
                               <h4 class="card-title mb-0 font-weight-bold text-danger"><b>' . $title . '</b></h4>
-                              <p class="card-text my-0 font-weight-bold h5">Days '.$days_place_name.'</p>
+                              <p class="card-text my-0 font-weight-bold h5">Days ' . $days_place_name . '</p>
                               <p class="card-text my-0 small font-weight-bold text-muted">
-                              '. $description.'
+                              ' . $description . '
                               </p>
                                 <p class="card-text h4 text-danger font-weight-bold my-0">
                                   <b>
-                                    Price : '.$price. '/- USD 
+                                    Price : ' . $price . '/- USD 
                                   </b>
                                 </p>
                               <p class="text-center my-2 mt-3">
@@ -586,7 +585,7 @@
                                 <a href="#" class="btn btn-success rounded-pill w-100 mr-1 font-weight-bold">
                                   <i class="fas fa-pen-alt"></i> Update
                                 </a>
-                                <a href="./itinerary-delete.php?lid='.$id.'" class="btn btn-danger rounded-pill w-100 ml-1 font-weight-bold ">
+                                <a href="./itinerary-delete.php?lid=' . $id . '" class="btn btn-danger rounded-pill w-100 ml-1 font-weight-bold ">
                                   <i class="fas fa-trash-alt"></i> Delete
                                 </a>
                               </p>

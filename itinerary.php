@@ -1,5 +1,34 @@
 <!doctype html>
 <html lang="en">
+<?php
+include './dbh/conn.php';
+$id = $_GET['q'];
+$id = hex2bin($id);
+$sql = "SELECT * FROM `itinerary` WHERE id = $id";
+$result = mysqli_query($conn, $sql);
+$data = mysqli_fetch_assoc($result);
+$title = $data['title'];
+$description = $data['description'];
+$days_place_name = $data['days_place_name'];
+$days_place_decs = $data['days_place_decs'];
+$card_img = $data['card_img'];
+$header_img = $data['header_img'];
+$accommodation = $data['accommodation'];
+$meals = $data['meals'];
+$transportation = $data['transportation'];
+$visa = $data['visa'];
+$included = $data['included'];
+$activity_level = $data['activity_level'];
+$group_size_min = $data['group_size_min'];
+$group_size_max = $data['group_size_max'];
+$group_size_avg = $data['group_size_avg'];
+$travel_type = $data['travel_type'];
+$tags = $data['tags'];
+$add_by = $data['add_by'];
+$continents = $data['continents'];
+$country = $data['country'];
+$price = $data['price'];
+?>
 
 <head>
   <title>Title</title>
@@ -19,7 +48,6 @@
     }
 
     .banner {
-      background-image: url(./img/banner/0a34dfe740ebdb6607e8b25eaa9a03b9photo-1502602898657-3e91760cbb34.png);
       background-position: center;
       background-size: cover;
       height: 60vh;
@@ -28,7 +56,7 @@
     }
 
     .banner p {
-      max-width: 400px;
+      max-width: 680px;
     }
 
     .itinerary .days {
@@ -60,98 +88,51 @@
   <?php include './inc/nav.php'; ?>
   <!-- Nav Bar -->
 
-  <div class="banner">
+  <div class="banner" style="background-image: url('./img/Itinerary/header/<?php echo $header_img; ?>');">
     <div class="container">
       <h1 class="text-white index-sidler-h1">
-        Paris
+        <?php echo $title; ?>
       </h1>
       <hr class="border-white" style="margin:5px; width:180px; border-width:3px;">
       <h3 class="text-white">
         Overview
       </h3>
       <p class="text-white">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, laudantium totam corrupti quidem labore dolorum? Consectetur eos qui voluptatem, iure eius nihil autem deleniti accusamus iusto asperiores quis obcaecati libero.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, laudantium totam corrupti quidem labore dolorum?
+        <?php echo $description; ?>
       </p>
     </div>
   </div>
+
   <div class="container my-3 itinerary">
     <div class="row">
       <div class="col-lg-7">
         <h3 class="text-muted">
           Itinerary
         </h3>
-        <p class="days">
-          <span>
-            Day 1
-          </span>
-          Paris
-        </p>
-        <p class="day_des">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-        </p>
-        <p class="days">
-          <span>
-            Day 2
-          </span>
-          Paris
-        </p>
-        <p class="day_des">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-        </p>
-        <p class="days">
-          <span>
-            Day 3
-          </span>
-          Paris
-        </p>
-        <p class="day_des">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-        </p>
-        <p class="days">
-          <span>
-            Day 4
-          </span>
-          Paris
-        </p>
-        <p class="day_des">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-        </p>
-        <p class="days">
-          <span>
-            Day 5
-          </span>
-          Paris
-        </p>
-        <p class="day_des">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-        </p>
-        <p class="days">
-          <span>
-            Day 6
-          </span>
-          Paris
-        </p>
-        <p class="day_des">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-        </p>
-        <p class="days">
-          <span>
-            Day 7
-          </span>
-          Paris
-        </p>
-        <p class="day_des">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem totam nemo illo distinctio, repellendus eligendi earum dolores, sint numquam saepe nobis quasi. Dignissimos modi at temporibus eius laudantium ullam.
-        </p>
+        <?php
+        $days_place_names = explode('-----', $days_place_name);
+        $a = 0;
+        $days_place_decss = explode('-----', $days_place_decs);
+        foreach ($days_place_names as $key => $value) {
+          $values = $days_place_decss[$a];
+          $a++;
+          echo "
+        <p class=\"days\">
+        <span>
+         Day $a          </span>
+        $value
+      </p>
+        <p class=\"day_des\">
+        $values
+      </p>
+        ";
+        }
+        ?>
       </div>
-      <div class="col-lg-5 overflow-hidden">
-        <div class="card text-white bg-danger border-0 rounded-lg" style="box-shadow: 3px 3px 10px #222;">
-          <img class="card-img-top" src="./img/Itinerary/photo-1549144511-f099e773c147.jpg" alt="">
+
+      <div class="col-lg-5 overflow-hidden" style="border-radius: 15px;">
+        <div class="card text-white bg-danger border-0" style="box-shadow: 3px 3px 10px #222; border-radius:15px;">
+          <img class="card-img-top" src="./img/Itinerary/<?php echo $card_img; ?>" alt="" style="border-radius: 15px;">
           <div class="card-body py-2">
             <h4 class="card-title font-weight-bolder mb-1"><b>7 Days</b></h4>
             <p class="card-text mb-0 font-weight-bold">
@@ -164,7 +145,7 @@
               From <br>
               <span class="font-weight-bold h2">
                 <b>
-                  USD 1499
+                  USD <?php echo $price; ?>
                 </b>
               </span>
               <span class="small font-weight-normal">
@@ -182,17 +163,15 @@
             </p>
             <hr class="w-25 border-danger my-2" style="border-width: 3px;">
             <p class="text-left mb-0">
-              Travel Type : <span class="text-danger font-weight-bold"> Group</span>
+              Travel Type : <span class="text-danger font-weight-bold"> <?php echo $travel_type; ?></span>
             </p>
             <p class="text-left mb-0">
-              Meal Type : <span class="text-danger font-weight-bold"> French</span>
-            </p>
-            <p class="text-left mb-0">
-              Group Size : <span class="text-danger font-weight-bold"> 15 Max</span>
+              Meal Type : <span class="text-danger font-weight-bold"> <?php echo $meals; ?></span>
             </p>
             <p class="text-left">
-              Minimum Age : <span class="text-danger font-weight-bold"> 16 Years</span>
+              Group Size : <span class="text-danger font-weight-bold"> <?php echo $group_size_max; ?></span>
             </p>
+
           </div>
         </div>
       </div>
@@ -202,34 +181,30 @@
         What is Included
       </h3>
       <ol class="ml-5">
-        <li style="list-style:square;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nihil impedit illum optio ad nemo.</li>
-        <li style="list-style:square;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nihil impedit illum optio ad nemo.</li>
-        <li style="list-style:square;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nihil impedit illum optio ad nemo.</li>
-        <li style="list-style:square;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nihil impedit illum optio ad nemo.</li>
-        <li style="list-style:square;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nihil impedit illum optio ad nemo.</li>
-        <li style="list-style:square;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nihil impedit illum optio ad nemo.</li>
-        <li style="list-style:square;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nihil impedit illum optio ad nemo.</li>
-        <li style="list-style:square;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nihil impedit illum optio ad nemo.</li>
-        <li style="list-style:square;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nihil impedit illum optio ad nemo.</li>
-        <li style="list-style:square;" class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nihil impedit illum optio ad nemo.</li>
+        <?php
+        $includeds = explode('-----', $included);
+        foreach ($includeds as $key => $value) {
+          echo "<li style=\"list-style:square;\" class=\"text-muted\">$value</li>";
+        }
+        ?>
       </ol>
       <h5 class="text-muted text-danger font-weight-bold">
         Accommodation
       </h5>
       <p>
-        Hotels (7days | 6 Nights)
+        <?php echo $accommodation; ?>
       </p>
       <h5 class="text-muted text-danger font-weight-bold">
         Meals
       </h5>
       <p>
-        Meal At Hotels
+        <?php echo $meals; ?>
       </p>
       <h5 class="text-muted text-danger font-weight-bold">
         Transportaton
       </h5>
       <p>
-        Meal At HotelsPrivate vehicle, antique WWII vehicle, canoe, walking
+        <?php echo $transportation; ?>
       </p>
       <h5 class="text-muted text-danger font-weight-bold">
         STAFF & EXPERTS
@@ -238,7 +213,6 @@
         2 CEOs (Chief Experience Officers) throughout, local guides
       </p>
     </div>
-
   </div>
   <div>
     <img src="https://images.assetsdelivery.com/compings_v2/tupungato/tupungato1901/tupungato190100486.jpg" class="w-100" alt="" srcset="">

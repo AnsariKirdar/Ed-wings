@@ -41,7 +41,7 @@
           $li = '';
           while ($country_list = mysqli_fetch_assoc($country)) {
             $country_name = $country_list['country'];
-            $li .= '<li><a href="#" class="text-white font-weight-bold px-1 mx-1 text-decoration-none small">' . $country_name . '</a></li>';
+            $li .= '<li><a  href="./trips.php?s=' . $country_name . '" class="text-white font-weight-bold px-1 mx-1 text-decoration-none small">' . $country_name . '</a></li>';
           }
           echo '
                       <div class="px-2 m-1 my-2">
@@ -106,12 +106,12 @@
           Use Full Links
         </p>
         <p class="mb-0">
-          <a href="./e-brochure.php"  class="text-white small font-weight-bold">
+          <a href="./e-brochure.php" class="text-white small font-weight-bold">
             <i class="fas fa-caret-right"></i> Download E-Brochure
           </a>
         </p>
         <p class="mb-0">
-          <a href="#" target="_blank" class="text-white small font-weight-bold">
+          <a href="./pressroom.php" target="_blank" class="text-white small font-weight-bold">
             <i class="fas fa-caret-right"></i> Press Room
           </a>
         </p>
@@ -171,7 +171,7 @@
           </a>
         </p>
         <p class="mb-0">
-          <a href="#" target="_blank" class="text-white small font-weight-bold">
+          <a href="./agents/register.php" target="_blank" class="text-white small font-weight-bold">
             <i class="fas fa-caret-right"></i> Become an Affiliate
           </a>
         </p>

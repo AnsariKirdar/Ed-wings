@@ -12,12 +12,12 @@
          <li class="nav-item active">
            <a class="nav-link text-danger" href="./index.php">Home</a>
          </li>
-         <li class="nav-item active">
+         <!-- <li class="nav-item active">
            <a class="nav-link text-danger" href="#">Holidays</a>
          </li>
          <li class="nav-item active">
            <a class="nav-link text-danger" href="#">Steals Deals</a>
-         </li>
+         </li> -->
          <li class="nav-item active">
            <a class="nav-link text-danger" href="./blogs.php">Blogs</a>
          </li>
@@ -58,7 +58,7 @@
             $li = '';
             while ($country_list = mysqli_fetch_assoc($country)) {
               $country_name = $country_list['country'];
-              $li .= '<li><a href="#" class="text-danger font-weight-bold px-1 mx-1 text-decoration-none">' . $country_name . '</a></li>';
+              $li .= '<li><a href="./trips.php?s='. $country_name.'" class="text-danger font-weight-bold px-1 mx-1 text-decoration-none">' . $country_name . '</a></li>';
             }
             echo '
                       <div class="px-2 m-1 my-2">

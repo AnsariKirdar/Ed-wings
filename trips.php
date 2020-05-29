@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>Title</title>
+  <title><?php echo $_GET['s'];?> Tour</title>
   <meta name="description" content="">
   <!-- meta tags -->
   <?php include './inc/head-links.php'; ?>
+  
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <style>
@@ -31,7 +32,8 @@ body {
           <div class="card-columns">
             <?php
           include './dbh/conn.php';
-          $sql = "SELECT * FROM `itinerary`";
+          $s = $_GET['s'];
+          $sql = "SELECT * FROM `itinerary` WHERE `title` = '$s' OR `continents` = '$s' OR `country` = '$s' OR 'description' = '$s'";
           $result = mysqli_query($conn,$sql);
           while($row = mysqli_fetch_assoc($result)){
               $id = $row['id'];
