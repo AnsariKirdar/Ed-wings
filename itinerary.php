@@ -31,54 +31,59 @@ $price = $data['price'];
 ?>
 
 <head>
-  <title>Title</title>
-  <meta name="description" content="">
+  <title><?php echo $title; ?></title>
+  <meta name="description" content="<?php echo $description; ?>">
   <!-- meta tags -->
   <?php include './inc/head-links.php'; ?>
 
   <link rel="stylesheet" href="./css/main.css">
   <style>
-    @font-face {
-      font-family: Bitter;
-      src: './css/fonts/CharlesWright-Bold.ttf';
-    }
+  @font-face {
+    font-family: Bitter;
+    src: './css/fonts/CharlesWright-Bold.ttf';
+  }
 
-    body {
-      background-image: url();
-    }
+  body {
+    background-image: url();
+  }
 
-    .banner {
-      background-position: center;
-      background-size: cover;
-      height: 60vh;
-      display: flex;
-      align-items: center;
-    }
+  .banner {
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+  }
 
-    .banner p {
-      max-width: 680px;
-    }
+  .banner p {
+    max-width: 680px;
+  }
 
-    .itinerary .days {
-      font-weight: bolder;
-      font-size: 110%;
-      color: var(--dark);
-      /* font-family: Bitter; */
-      margin-bottom: 0px;
-    }
+  .itinerary .days {
+    font-weight: bolder;
+    font-size: 110%;
+    color: var(--dark);
+    /* font-family: Bitter; */
+    margin-bottom: 0px;
+  }
 
-    .itinerary .days span {
-      font-weight: bolder;
-      font-size: 110%;
-      color: var(--danger);
-      margin-right: 20px;
-    }
+  .itinerary .days span {
+    font-weight: bolder;
+    font-size: 110%;
+    color: var(--danger);
+    margin-right: 20px;
+  }
 
-    .itinerary .days_des {
-      font-weight: bolder;
-      font-size: 90%;
-      /* color: var(--danger); */
-    }
+  .itinerary .days_des {
+    font-weight: bolder;
+    font-size: 90%;
+    /* color: var(--danger); */
+  }
+
+  .overviews {
+    text-shadow: 2px 0px 2px rgba(0, 0, 0, 1);
+    font-weight: 450;
+  }
   </style>
 </head>
 
@@ -94,10 +99,10 @@ $price = $data['price'];
         <?php echo $title; ?>
       </h1>
       <hr class="border-white" style="margin:5px; width:180px; border-width:3px;">
-      <h3 class="text-white">
+      <h3 class="text-white overviews">
         Overview
       </h3>
-      <p class="text-white">
+      <p class="text-white overviews">
         <?php echo $description; ?>
       </p>
     </div>
@@ -131,15 +136,16 @@ $price = $data['price'];
       </div>
 
       <div class="col-lg-5 overflow-hidden" style="border-radius: 15px;">
-        <div class="card text-white bg-danger border-0" style="box-shadow: 3px 3px 10px #222; border-radius:15px;">
-          <img class="card-img-top" src="./img/Itinerary/<?php echo $card_img; ?>" alt="" style="border-radius: 15px;">
-          <div class="card-body py-2">
+        <div class="card text-white border-0 my-3" style="box-shadow: 3px 3px 10px #222; border-radius:15px;">
+          <img class="card-img-top" src="./img/Itinerary/<?php echo $card_img; ?>" alt=""
+               style="border-radius: 15px 15px 0 0;">
+          <div class="card-body py-2 bg-danger" style="border-radius:0 0 15px 15px; box-shadow: 0px 1px 5px #f00;">
             <h4 class="card-title font-weight-bolder mb-1"><b>7 Days</b></h4>
             <p class="card-text mb-0 font-weight-bold">
-              Start City : <b>Paris</b>
+              Start City : <b><?php echo $days_place_names['0']; ?></b>
             </p>
             <p class="card-text mb-2 font-weight-bold">
-              Start City : <b>Paris</b>
+              Start City : <b><?php echo $days_place_names[count($days_place_names) - 1]; ?></b>
             </p>
             <p class="mb-0 small font-weight-bold">
               From <br>
@@ -157,7 +163,7 @@ $price = $data['price'];
               Active Tour
             </p>
           </div>
-          <div class="rounded-bottom text-dark  bg-white text-center px-4">
+          <div class="text-dark text-center px-4">
             <p class="my-2 font-weight-bold h5">
               Tour Specification
             </p>
@@ -170,6 +176,9 @@ $price = $data['price'];
             </p>
             <p class="text-left">
               Group Size : <span class="text-danger font-weight-bold"> <?php echo $group_size_max; ?></span>
+            </p>
+            <p class="text-left">
+              Actives : <span class="text-danger font-weight-bold"> <?php echo $tags; ?></span>
             </p>
 
           </div>
@@ -215,7 +224,8 @@ $price = $data['price'];
     </div>
   </div>
   <div>
-    <img src="https://images.assetsdelivery.com/compings_v2/tupungato/tupungato1901/tupungato190100486.jpg" class="w-100" alt="" srcset="">
+    <img src="https://images.assetsdelivery.com/compings_v2/tupungato/tupungato1901/tupungato190100486.jpg"
+         class="w-100" alt="" srcset="">
   </div>
   <!-- footer  -->
   <?php include './inc/footer.php'; ?>
@@ -223,11 +233,14 @@ $price = $data['price'];
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
 
 </body>

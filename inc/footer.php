@@ -16,7 +16,8 @@
       </p>
       <p class="mb-0">
         <a href="http://visiontechnology.co.in" target="_blank" class="ml-3 text-decoration-none">
-          <img src="./img/partnerLogo/5b169a23b7c4594b89990563_deloitte_grey.svg" alt="" height="30px" srcset="" class="my-sm-2">
+          <img src="./img/partnerLogo/5b169a23b7c4594b89990563_deloitte_grey.svg" alt="" height="30px" srcset=""
+               class="my-sm-2">
         </a>
         <a href="http://visiontechnology.co.in" target="_blank" class="ml-3 text-decoration-none">
           <img src="./img/partnerLogo/Microsoft-CSP-1024x295.png" alt="" height="30px" srcset="" class="my-sm-2">
@@ -41,11 +42,11 @@
           $li = '';
           while ($country_list = mysqli_fetch_assoc($country)) {
             $country_name = $country_list['country'];
-            $li .= '<li><a  href="./trips.php?s=' . $country_name . '" class="text-white font-weight-bold px-1 mx-1 text-decoration-none small">' . $country_name . '</a></li>';
+            $li .= '<li><a href="./trips.php?s=' . $country_name . '" class="text-white target="_blank"  font-weight-bold px-1 mx-1 text-decoration-none small">' . $country_name . '</a></li>';
           }
           echo '
-                      <div class="px-2 m-1 my-2">
-                        <p class="text-white font-weight-bold mb-0">' . $continent . '</p>
+                      <div class="px-2 m-1 my-2"> 
+                        <p class="text-white font-weight-bold mb-0"><a href="./trips.php?s=' . $continent . '" class="text-white target="_blank"  font-weight-bold px-1 mx-1 text-decoration-none small">' . $continent . '</a></p>
                         <ul class="text-white font-weight-bold px-2">
                           ' . $li . '
                         </ul>
@@ -97,8 +98,10 @@
         </p>
         <p>
           <b>
-            Email : <a class="text-white text-decoration-none" href="mailto:edwin@ed-wings.com" target="_top">edwin@ed-wings.com</a> |
-            <a class="text-white text-decoration-none" href="mailto:travel@ed-wings.com" target="_top">travel@ed-wings.com</a></b>
+            Email : <a class="text-white text-decoration-none" href="mailto:edwin@ed-wings.com"
+               target="_top">edwin@ed-wings.com</a> |
+            <a class="text-white text-decoration-none" href="mailto:travel@ed-wings.com"
+               target="_top">travel@ed-wings.com</a></b>
         </p>
       </div>
       <div class="col-lg-2 col-md-4 col-sm-12">
@@ -116,7 +119,7 @@
           </a>
         </p>
         <p class="mb-0">
-          <a href="./about-us.php" class="text-white small font-weight-bold">
+          <a href="./about-us.php" target="_blank" class="text-white small font-weight-bold">
             <i class="fas fa-caret-right"></i> About Us
           </a>
         </p>
@@ -136,12 +139,7 @@
           </a>
         </p>
         <p class="mb-0">
-          <a href="#" target="_blank" class="text-white small font-weight-bold">
-            <i class="fas fa-caret-right"></i> Disclaimer
-          </a>
-        </p>
-        <p class="mb-0">
-          <a href="feedback.php" class="text-white small font-weight-bold">
+          <a href="feedback.php" target="_blank" class="text-white small font-weight-bold">
             <i class="fas fa-caret-right"></i> Feedback
           </a>
         </p>
@@ -176,12 +174,12 @@
           </a>
         </p>
         <p class="mb-0">
-          <a href="#" target="_blank" class="text-white small font-weight-bold">
+          <a href="./investor_relation.php" target="_blank" class="text-white small font-weight-bold">
             <i class="fas fa-caret-right"></i> Investor Relation
           </a>
         </p>
         <p class="mb-0">
-          <a href="#" target="_blank" class="text-white small font-weight-bold">
+          <a href="./our_office.php" target="_blank" class="text-white small font-weight-bold">
             <i class="fas fa-caret-right"></i> Our Office
           </a>
         </p>
@@ -205,10 +203,12 @@
           <form action="#" method="post">
             <div class="row">
               <div class="col-8 px-1">
-                <input type="email" name="email" class="form-control" id="" style="background-color: rgba(255, 255, 255, .0); border:2px solid #fff;">
+                <input type="email" name="email" class="form-control" id=""
+                       style="background-color: rgba(255, 255, 255, .0); border:2px solid #fff;">
               </div>
               <div class="col-4 px-1">
-                <input type="submit" class="btn btn-outline-light btn-block font-weight-bold" value="Subscribe" style=" border:2px solid #fff;">
+                <input type="submit" class="btn btn-outline-light btn-block font-weight-bold" value="Subscribe"
+                       style=" border:2px solid #fff;">
               </div>
             </div>
           </form>
@@ -245,7 +245,8 @@
         Copyright www.ed-wings.com | <?php echo date('Y'); ?>
       </span>
       <span>
-        Powered by <a href="http://crystaloceanmedia.in" class="text-white font-weight-bold text-decoration-none" target="_blank" rel="noopener noreferrer">
+        Powered by <a href="http://crystaloceanmedia.in" class="text-white font-weight-bold text-decoration-none"
+           target="_blank" rel="noopener noreferrer">
           Crystal Ocean Groups
       </span>
       </a>

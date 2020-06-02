@@ -1,9 +1,10 @@
  <section class="fixed-top">
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-     <a class="navbar-brand" href="#">
+     <a class="navbar-brand" href="./index.php">
        <img src="./img/logo/nav-logo.png" height="30" alt="">
      </a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
      </button>
 
@@ -29,7 +30,8 @@
          </li>
 
          <li class="nav-item active">
-           <a type="button" class="nav-link text-danger" onclick="display_dropdown()">Country Tours <i class="fas fa-caret-down"></i></a>
+           <a type="button" class="nav-link text-danger" onclick="display_dropdown()">Country Tours <i
+                class="fas fa-caret-down"></i></a>
          </li>
 
          <li class="nav-item active">
@@ -40,13 +42,16 @@
          </li>
        </ul>
        <form class="form-inline my-2 ml-3 my-lg-0" action="./trips.php" method="GET">
-         <input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Search" name="s" aria-label="Search" style="background-color: #fff !important; color:black; font-weight:normal;">
+         <input class="form-control mr-sm-2 rounded-pill" type="search" placeholder="Search" name="s"
+                aria-label="Search" style="background-color: #fff !important; color:black; font-weight:normal;">
          <button class="btn btn-success font-weight-bold my-2 my-sm-0 px-5 rounded-pill" type="submit">Search</button>
-         <a href="./login.php" class="btn btn-danger my-2 my-sm-0 px-4 rounded-pill font-weight-bold mx-2 mr-4">Login /Sign up</a>
+         <a href="./login.php" class="btn btn-danger my-2 my-sm-0 px-4 rounded-pill font-weight-bold mx-2 mr-4">Login
+           /Sign up</a>
        </form>
      </div>
    </nav>
-   <section class="px-4 py-3" id="display_dropdown" style="display: none; border-top:3px solid var(--danger); background-color:rgba(255, 255,255,1)">
+   <section class="px-4 py-3" id="display_dropdown"
+            style="display: none; border-top:3px solid var(--danger); background-color:rgba(255, 255,255,1)">
      <div class="d-lg-flex d-md-flex d-sm-block justify-content-between">
        <?php
         include './dbh/conn.php';
@@ -58,11 +63,11 @@
             $li = '';
             while ($country_list = mysqli_fetch_assoc($country)) {
               $country_name = $country_list['country'];
-              $li .= '<li><a href="./trips.php?s='. $country_name.'" class="text-danger font-weight-bold px-1 mx-1 text-decoration-none">' . $country_name . '</a></li>';
+              $li .= '<li><a href="./trips.php?s=' . $country_name . '" class="text-danger font-weight-bold px-1 mx-1 text-decoration-none">' . $country_name . '</a></li>';
             }
             echo '
                       <div class="px-2 m-1 my-2">
-                        <h5 class="text-danger font-weight-bold">' . $continent . '</h5>
+                        <h5 class="text-danger font-weight-bold"><a href="./trips.php?s=' . $continent . '" class="text-danger font-weight-bold px-1 mx-1 text-decoration-none">' . $continent . '</a></h5>
                         <ul class="text-danger font-weight-bold px-2">
                           ' . $li . '
                         </ul>
@@ -75,15 +80,15 @@
    </section>
  </section>
  <script>
-   var displays_dropdown = 'off';
+var displays_dropdown = 'off';
 
-   function display_dropdown() {
-     if (displays_dropdown === 'off') {
-       document.getElementById('display_dropdown').style.display = 'block';
-       displays_dropdown = 'on';
-     } else {
-       document.getElementById('display_dropdown').style.display = 'none';
-       displays_dropdown = 'off';
-     }
-   }
+function display_dropdown() {
+  if (displays_dropdown === 'off') {
+    document.getElementById('display_dropdown').style.display = 'block';
+    displays_dropdown = 'on';
+  } else {
+    document.getElementById('display_dropdown').style.display = 'none';
+    displays_dropdown = 'off';
+  }
+}
  </script>

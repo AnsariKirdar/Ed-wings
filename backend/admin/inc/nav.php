@@ -1,9 +1,10 @@
  <section class="fixed-top">
    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-     <a class="navbar-brand" href="#">
+     <a class="navbar-brand" href="./../../index.php">
        <img src="../../img/logo/nav-logo.png" height="30" alt="">
      </a>
-     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
      </button>
 
@@ -37,6 +38,9 @@
            <a class="nav-link text-danger" href="#">Special Tours</a>
          </li>
          <li class="nav-item active">
+           <a class="nav-link text-danger" href="./mis.php">Mis</a>
+         </li>
+         <li class="nav-item active">
            <a class="nav-link text-danger" href="#">Users Control</a>
          </li>
          <!-- <li class="nav-item active">
@@ -62,7 +66,8 @@
          </li> -->
        </ul>
        <form class="form-inline my-2 ml-3 my-lg-0">
-         <a href="logout.php" class="btn btn-danger my-2 my-sm-0 btn-sm px-4 rounded-pill font-weight-bold text-white" type="submit"> <i class="fas fa-lock    "></i> Logout</a>
+         <a href="logout.php" class="btn btn-danger my-2 my-sm-0 btn-sm px-4 rounded-pill font-weight-bold text-white"
+            type="submit"> <i class="fas fa-lock    "></i> Logout</a>
        </form>
      </div>
    </nav>

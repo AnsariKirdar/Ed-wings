@@ -8,29 +8,29 @@
   <?php include './inc/inc.php'; ?>
   <link rel="stylesheet" href="./css/bootstrap.min.css" />
   <style>
-    .rounded-left-pill {
-      border-radius: 52rem 0 0 52rem;
-    }
+  .rounded-left-pill {
+    border-radius: 52rem 0 0 52rem;
+  }
 
-    .rounded-right-pill {
-      border-radius: 0 52rem 52rem 0;
-    }
+  .rounded-right-pill {
+    border-radius: 0 52rem 52rem 0;
+  }
 
-    .nav {
-      background-color: #fff;
-      padding: 10px 20px;
-      border-radius: 13px;
-    }
+  .nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 13px;
+  }
 
-    .nav-pills .nav-link {
-      font-weight: bold;
-      color: var(--danger);
-    }
+  .nav-pills .nav-link {
+    font-weight: bold;
+    color: var(--danger);
+  }
 
-    .nav-pills .nav-link.active {
-      background-color: var(--danger);
-      font-weight: bold;
-    }
+  .nav-pills .nav-link.active {
+    background-color: var(--danger);
+    font-weight: bold;
+  }
   </style>
 </head>
 
@@ -44,17 +44,20 @@
         <!-- Nav tabs -->
         <ul class="nav nav-pills nav-fill">
           <li class="nav-item active">
-            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+               aria-selected="true">
               Continent Control
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+               aria-selected="false">
               Country Control
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings" aria-selected="false">
+            <a class="nav-link" id="settings-tab" data-toggle="tab" href="#settings" role="tab" aria-controls="settings"
+               aria-selected="false">
               Itinerary Control
             </a>
           </li>
@@ -87,7 +90,8 @@
                 </div> -->
                   <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
                     <label for=""></label>
-                    <button type="submit" name="add_location" class="btn btn-success font-weight-bold px-4 rounded-pill">
+                    <button type="submit" name="add_location"
+                            class="btn btn-success font-weight-bold px-4 rounded-pill">
                       Add this continent
                     </button>
                   </div>
@@ -294,17 +298,20 @@
 
             <ul class="nav nav-pills mb-3 nav-fill my-2" id="pills-tab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="view_itinerary-tab" data-toggle="pill" href="#view_itinerary" role="tab" aria-controls="view_itinerary" aria-selected="true">Add Itinerary</a>
+                <a class="nav-link active" id="view_itinerary-tab" data-toggle="pill" href="#view_itinerary" role="tab"
+                   aria-controls="view_itinerary" aria-selected="true">Add Itinerary</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="view_itinerary_setting-tab" data-toggle="pill" href="#view_itinerary_setting" role="tab" aria-controls="view_itinerary_setting" aria-selected="false">Update / Delete Itinerary</a>
+                <a class="nav-link" id="view_itinerary_setting-tab" data-toggle="pill" href="#view_itinerary_setting"
+                   role="tab" aria-controls="view_itinerary_setting" aria-selected="false">Update / Delete Itinerary</a>
               </li>
               <!-- <li class="nav-item">
                 <a class="nav-link" id="view_itinerary_setting_s-tab" data-toggle="pill" href="#view_itinerary_setting_s" role="tab" aria-controls="view_itinerary_setting_s" aria-selected="false">Contact</a>
               </li> -->
             </ul>
             <div class="tab-content" id="pills-tabContent">
-              <div class="tab-pane fade show active" id="view_itinerary" role="tabpanel" aria-labelledby="view_itinerary-tab">
+              <div class="tab-pane fade show active" id="view_itinerary" role="tabpanel"
+                   aria-labelledby="view_itinerary-tab">
                 <div>
                   <h2 class=" font-weight-bold mt-3">
                     Add Itinerary
@@ -314,7 +321,8 @@
                     <div class="row">
                       <div class="form-group col-lg-6 col-md-6 col-sm-12">
                         <label for="">Continent</label>
-                        <select name="continent" class="form-control form-control-lg" id="" onchange="change_country(this.value)">
+                        <select name="continent" class="form-control form-control-lg" id=""
+                                onchange="change_country(this.value)">
                           <option value=""></option>
                           <?php
                           include './../../dbh/conn.php';
@@ -330,7 +338,8 @@
                       </div>
                       <div class="form-group col-lg-6 col-md-6 col-sm-12">
                         <label for="">Country</label>
-                        <input type="text" id="country" name="country" class="form-control form-control-lg" id="" autocomplete="off">
+                        <input type="text" id="country" name="country" class="form-control form-control-lg" id=""
+                               autocomplete="off">
                         <?php
                         include './../../dbh/conn.php';
                         $result = mysqli_query($conn, 'SELECT * FROM `continent` ORDER BY `continents` ASC');
@@ -369,13 +378,15 @@
                           <div class="col-lg-10 p-0" id="days">
                             <div class="row" id="">
                               <div class="col-lg-6 col-md-6 col-sm-10 my-2 pr-0">
-                                <input type="text" name="days_place_name[]" class="form-control form-control-lg" placeholder="Place" aria-describedby="helpId">
+                                <input type="text" name="days_place_name[]" class="form-control form-control-lg"
+                                       placeholder="Place" aria-describedby="helpId">
                                 <p class="text-muted small font-weight-bold px-2">
                                   Please Enter the name of the place you will visit this day
                                 </p>
                               </div>
                               <div class="col-lg-6 col-md-6 col-sm-10 my-2">
-                                <input type="text" name="days_place_decs[]" class="form-control form-control-lg" placeholder="Place Description" aria-describedby="helpId">
+                                <input type="text" name="days_place_decs[]" class="form-control form-control-lg"
+                                       placeholder="Place Description" aria-describedby="helpId">
                                 <p class="text-muted small font-weight-bold px-2">
                                   Please describe the activities if make sense
                                 </p>
@@ -385,7 +396,8 @@
                           </div>
                           <div class="col-lg-2 col-md-2 col-sm-2 my-2 position-relative p-0">
                             <div class="position-absolute pl-1" style="bottom: 34px; left:0px;">
-                              <a class="btn btn-block btn-lg btn-danger text-white " id="add_day_description" onclick="add_day_description()">
+                              <a class="btn btn-block btn-lg btn-danger text-white " id="add_day_description"
+                                 onclick="add_day_description()">
                                 <i class="fas fa-plus"></i> Add Days
                               </a>
                             </div>
@@ -499,18 +511,23 @@
 
                       <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="">Card Image</label>
-                        <input type="file" name="card_img" class="form-control form-control-lg form-control-file" required>
+                        <input type="file" name="card_img" class="form-control form-control-lg form-control-file"
+                               required>
                         <small id="helpId" class="text-muted">
-                          We suggest the slider should be the 443px x 276px and under 700kb for better experience</small>
+                          We suggest the slider should be the 443px x 276px and under 700kb for better
+                          experience</small>
                       </div>
                       <div class="form-group col-lg-6 col-md-12 col-sm-12">
                         <label for="">Header Image</label>
-                        <input type="file" name="header" class="form-control form-control-lg form-control-file" required>
-                        <small id="helpId" class="text-muted">We suggest the slider should be the 1100px x 300px and under 700kb for better experience</small>
+                        <input type="file" name="header" class="form-control form-control-lg form-control-file"
+                               required>
+                        <small id="helpId" class="text-muted">We suggest the slider should be the 1100px x 300px and
+                          under 700kb for better experience</small>
                       </div>
                       <div class="form-group col-lg-12 col-md-12 col-sm-12 text-center">
                         <label for=""></label>
-                        <button type="submit" name="upload_itinerary" class="btn btn-success mt-5 font-weight-bold px-4 rounded-pill text-white">
+                        <button type="submit" name="upload_itinerary"
+                                class="btn btn-success mt-5 font-weight-bold px-4 rounded-pill text-white">
                           Upload Itinerary
                         </button>
                       </div>
@@ -520,26 +537,27 @@
 
                 </div>
                 <script>
-                  function add_included() {
-                    $('#included').append(
-                      '<div class="col-12" id="included_e"><input type="text" name="included[]" required value="" class="form-control form-control-lg my-2"><p class="text-muted small font-weight-bold px-2">Please Describe what is included with this package</p></div>'
-                    );
-                  }
+                function add_included() {
+                  $('#included').append(
+                    '<div class="col-12" id="included_e"><input type="text" name="included[]" required value="" class="form-control form-control-lg my-2"><p class="text-muted small font-weight-bold px-2">Please Describe what is included with this package</p></div>'
+                  );
+                }
 
-                  function add_day_description() {
-                    $('#days').append(
-                      '<div class="row"><div class="col-lg-6 col-md-6 col-sm-10 my-2"><input type="text" required name="days_place_name[]" class="form-control form-control-lg" value="" placeholder="Place" aria-describedby="helpId"><p class="text-muted small font-weight-bold px-2">Please Enter the name of the place you will visit this day</p></div><div class="col-lg-6 col-md-6 col-sm-10 my-2"><input type="text" name="days_place_decs[]" class="form-control form-control-lg" value="" placeholder="Place Description" required aria-describedby="helpId"><p class="text-muted small font-weight-bold px-2">Please describe the activities if make sense</p></div></div>'
-                    );
-                  }
+                function add_day_description() {
+                  $('#days').append(
+                    '<div class="row"><div class="col-lg-6 col-md-6 col-sm-10 my-2"><input type="text" required name="days_place_name[]" class="form-control form-control-lg" value="" placeholder="Place" aria-describedby="helpId"><p class="text-muted small font-weight-bold px-2">Please Enter the name of the place you will visit this day</p></div><div class="col-lg-6 col-md-6 col-sm-10 my-2"><input type="text" name="days_place_decs[]" class="form-control form-control-lg" value="" placeholder="Place Description" required aria-describedby="helpId"><p class="text-muted small font-weight-bold px-2">Please describe the activities if make sense</p></div></div>'
+                  );
+                }
 
-                  function change_country(value) {
-                    var continent = value;
-                    document.getElementById('country').value = '';
-                    document.getElementById('country').setAttribute('list', continent);
-                  }
+                function change_country(value) {
+                  var continent = value;
+                  document.getElementById('country').value = '';
+                  document.getElementById('country').setAttribute('list', continent);
+                }
                 </script>
               </div>
-              <div class="tab-pane fade" id="view_itinerary_setting" role="tabpanel" aria-labelledby="view_itinerary_setting-tab">
+              <div class="tab-pane fade" id="view_itinerary_setting" role="tabpanel"
+                   aria-labelledby="view_itinerary_setting-tab">
                 <div class="row">
                   <div class="col-3">
                     <div class="bg-white h-100 p-3 px-4" style="border-radius: 13px;">
@@ -562,7 +580,7 @@
                         $days_place_name = count($days_place_name);
 
                         echo '
-                        <div class="col-6">
+                        <div class="col-6 my-3">
                           <div class="card overflow-hidden border-0 shadow" style="border-radius: 12px;">
                             <img class="card-img-top" src="./../../img/Itinerary/' . $img . '" alt="">
                             <div class="card-body p-2 pt-2 pb-3">
@@ -613,11 +631,14 @@
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
 </body>
 

@@ -2,11 +2,17 @@
 <html lang="en">
 
 <head>
-  <title><?php echo $_GET['s'];?> Tour</title>
+  <title>
+    <?php
+    if (isset($_GET['s'])) {
+      echo $_GET['s'];
+    } else {
+      echo 'Ed-wings';
+    } ?> Tour</title>
   <meta name="description" content="">
   <!-- meta tags -->
   <?php include './inc/head-links.php'; ?>
-  
+
   <link rel="stylesheet" href="./css/main.css">
 </head>
 <style>
@@ -29,13 +35,16 @@ body {
           hihihih
         </div>
         <div class="col-lg-9 col-md-9 col-sm-8 p-2">
-          <div class="card-columns">
-            <?php
+
+          <?php
           include './dbh/conn.php';
-          $s = $_GET['s'];
-          $sql = "SELECT * FROM `itinerary` WHERE `title` = '$s' OR `continents` = '$s' OR `country` = '$s' OR 'description' = '$s'";
-          $result = mysqli_query($conn,$sql);
-          while($row = mysqli_fetch_assoc($result)){
+          $s = isset($_GET['s']);
+          $sql = "SELECT * FROM `itinerary` WHERE `title` LIKE '%$s%' OR `continents`  LIKE '%$s%' OR `country`  LIKE '%$s%' OR `description` = '$s' OR `tags` LIKE '%$s%'";
+          $result = mysqli_query($conn, $sql);
+          if (mysqli_num_rows($result)) {
+            echo '<div class="card-columns">';
+
+            while ($row = mysqli_fetch_assoc($result)) {
               $id = $row['id'];
               $id = bin2hex($id);
               $title = $row['title'];
@@ -48,56 +57,63 @@ body {
               $days_place_name = $row['days_place_name'];
               $days_place_name = explode('-----', $days_place_name);
               $days_place_name = count($days_place_name);
-              
-echo '
-<div class="card overflow-hidden shadow" style="border-radius:10px;">
-    <div>
-      <img class="card-img-top rounded-0" src="./img/Itinerary/' . $img . '" alt="" srcset="">
-    </div>
-    <div class="card-body p-0">
-<div class="bg-light px-2 py-1 small font-weight-bold">
- <a href="trips.php?s=' . $country . '" target="_blank" class="text-decoration-none text-muted">
-' . $country . '
- </a>
- /
- <a href="trips.php?s=' . $continents . '" target="_blank" class="text-decoration-none text-muted">
-' . $continents . '
- </a>
-</div>
 
-      <div class="py-0 px-2">
-      <h4 class="text-danger font-weight-bolder my-0 py-0">
-        ' . $title . '
-      </h4>
-      <!-- <h4 class="card-title">Title</h4> -->
-      <p class="text-danger font-weight-bold my-0 small mb-1">
-        ' . $days_place_name . ' Days
-      </p>
-      <p class="font-weight-bold text-danger my-1">
-        <span class="h5 font-weight-bold">
-          <b>
-            USD ' . $price . '/-
-          </b>
-        </span>
-        <span class="text-secondary small font-weight-bold">
-          Per Person
-        </span>
-      </p>
-      <p class="">
-        <a href="itinerary.php?q=' . $id . '" class="btn btn-block btn-danger w-100 mx-1 rounded-pill font-weight-bold" target="_blank">
-          More Detail\'s
-        </a>
-      </p>
-      
-      </div>
-
-
-    </div>
-  </div>
-';
-          }
-          ?>
+              echo '
+          <div class="card overflow-hidden shadow" style="border-radius:10px;">
+              <div>
+                <img class="card-img-top rounded-0" src="./img/Itinerary/' . $img . '" alt="" srcset="">
+              </div>
+              <div class="card-body p-0">
+          <div class="bg-light px-2 py-1 small font-weight-bold">
+          <a href="trips.php?s=' . $country . '" target="_blank" class="text-decoration-none text-muted">
+          ' . $country . '
+          </a>
+          /
+          <a href="trips.php?s=' . $continents . '" target="_blank" class="text-decoration-none text-muted">
+          ' . $continents . '
+          </a>
           </div>
+
+                <div class="py-0 px-2">
+                <h4 class="text-danger font-weight-bolder my-0 py-0">
+                  ' . $title . '
+                </h4>
+                <!-- <h4 class="card-title">Title</h4> -->
+                <p class="text-danger font-weight-bold my-0 small mb-1">
+                  ' . $days_place_name . ' Days
+                </p>
+                <p class="text-dark font-weight-bold my-0 small mb-1">
+                  ' . substr($description, 0, 30) . '...
+                </p>
+                <p class="font-weight-bold text-danger my-1">
+                  <span class="h5 font-weight-bold">
+                    <b>
+                      USD ' . $price . '/-
+                    </b>
+                  </span>
+                  <span class="text-secondary small font-weight-bold">
+                    Per Person
+                  </span>
+                </p>
+                <p class="">
+                  <a href="itinerary.php?q=' . $id . '" class="btn btn-block btn-danger w-100 mx-1 rounded-pill font-weight-bold" target="_blank">
+                    More Detail\'s
+                  </a>
+                </p>
+                
+                </div>
+
+
+              </div>
+            </div>
+          ';
+            }
+            echo '</div>';
+          } else {
+            echo "Sorry";
+          }
+
+          ?>
         </div>
       </div>
     </div>

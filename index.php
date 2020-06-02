@@ -10,65 +10,65 @@
   <link rel="stylesheet" href="./css/swiper.min.css">
   <link rel="stylesheet" href="./css/main.css">
   <style>
-    .top_destination .swiper-container-2 {
-      width: 100%;
-      height: 100%;
-      margin-bottom: 50px;
-    }
+  .top_destination .swiper-container-2 {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+  }
 
-    .top_destination .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      /* height: 200px; */
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-      border-radius: 12px;
-      background-color: aliceblue;
-      padding: 10px;
-    }
+  .top_destination .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    /* height: 200px; */
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: aliceblue;
+    padding: 10px;
+  }
 
-    .swiper-container-3 {
-      width: 100%;
-      height: 100%;
-    }
+  .swiper-container-3 {
+    width: 100%;
+    height: 100%;
+  }
 
-    .swiper-container-3 .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-      border-radius: 12px;
-      background-color: aliceblue;
-      padding: 10px;
-    }
+  .swiper-container-3 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    border-radius: 12px;
+    background-color: aliceblue;
+    padding: 10px;
+  }
 
-    .form-control:focus,
-    .form-control:active,
-    .form-control {
-      background-color: transparent !important;
-      color: #fff;
-      font-weight: bold;
-    }
+  .form-control:focus,
+  .form-control:active,
+  .form-control {
+    background-color: transparent !important;
+    color: #fff;
+    font-weight: bold;
+  }
   </style>
 </head>
 
@@ -205,7 +205,7 @@
       <p class="text-danger font-weight-bold my-0">
         ' . $days_place_name . ' Days
       </p>
-      <p class="text-secondary font-weight-bold my-2 my-0">
+      <p class="text-secondary font-weight-bold my-1">
        ' . $tags . '
       </p>
       <p class="font-weight-bold text-danger my-2 my-0">
@@ -219,7 +219,7 @@
         </span>
       </p>
       <p class="d-flex justify-content-around my-0">
-        <a href="itinerary.php?q='. $id. '" class="btn btn btn-danger w-100 mx-1 rounded-pill font-weight-bold" target="_blank">
+        <a href="itinerary.php?q=' . $id . '" class="btn btn btn-danger w-100 mx-1 rounded-pill font-weight-bold" target="_blank">
           More Detail\'s
         </a>
         <button class="btn btn btn-danger w-100 rounded-pill mx-1 font-weight-bold">
@@ -234,7 +234,8 @@
       ?>
       <div class="col-lg-12 col-md-12 col-sm-12 my-2">
         <p class="text-center">
-          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-danger px-5 rounded-pill font-weight-bold">
+          <a href="./trips.php" target="_blank" rel="noopener noreferrer"
+             class="btn btn-danger px-5 rounded-pill font-weight-bold">
             SEE ALL ITINERARIES
           </a>
         </p>
@@ -363,7 +364,8 @@
 
     </div>
   </div>
-  <div class="d-lg-flex d-md-flex d-sm-block justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column py-5 my-5">
+  <div
+       class="d-lg-flex d-md-flex d-sm-block justify-content-center align-items-center flex-sm-column flex-lg-row flex-md-column py-5 my-5">
     <div class="container order-md-1 order-lg-0 order-sm-1 my-4">
       <center>
         <img src="./img/logo/nav-logo.png" width="400px" alt="">
@@ -449,19 +451,23 @@
       <form action="index.php" method="post" class="w-75 mx-auto">
         <div class="form-group">
           <label for="" class=" text-light text-center font-weight-bold h3 w-100">Your Name</label>
-          <input type="text" name="name" id="" class="form-control form-control-lg bg-transparent rounded-pill" placeholder="" aria-describedby="helpId" style="border-width: 2px;">
+          <input type="text" name="name" id="" class="form-control form-control-lg bg-transparent rounded-pill"
+                 placeholder="" aria-describedby="helpId" style="border-width: 2px;">
         </div>
         <div class="form-group">
           <label for="" class=" text-light text-center font-weight-bold h3 w-100">Contact Number</label>
-          <input type="text" name="contact" id="" class="form-control form-control-lg bg-transparent rounded-pill" placeholder="" aria-describedby="helpId" style="border-width: 2px;">
+          <input type="text" name="contact" id="" class="form-control form-control-lg bg-transparent rounded-pill"
+                 placeholder="" aria-describedby="helpId" style="border-width: 2px;">
         </div>
         <div class="form-group">
           <label for="" class=" text-light text-center font-weight-bold h3 w-100">Email Address</label>
-          <input type="text" name="email" id="" class="form-control form-control-lg bg-transparent rounded-pill" placeholder="" aria-describedby="helpId" style="border-width: 2px;">
+          <input type="text" name="email" id="" class="form-control form-control-lg bg-transparent rounded-pill"
+                 placeholder="" aria-describedby="helpId" style="border-width: 2px;">
         </div>
         <div class="form-group">
           <label for="" class=" text-light text-center font-weight-bold h3 w-100">Message</label>
-          <textarea name="massage" class="form-control rounded-lg form-control-lg bg-transparent border-light w-100" id="" rows="5" style="border-width: 2px;"></textarea>
+          <textarea name="massage" class="form-control rounded-lg form-control-lg bg-transparent border-light w-100"
+                    id="" rows="5" style="border-width: 2px;"></textarea>
         </div>
         <center>
           <button type="submit" class="btn btn-outline-light btn-lg px-5 font-weight-bold rounded-pill text-uppercase">
@@ -480,100 +486,103 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
   <script src="./js/swiper.min.js"></script>
   <script>
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 1,
-      loop: true,
-      // effect: 'fade',
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    loop: true,
+    // effect: 'fade',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 
-    var swiper = new Swiper('.swiper-container-2', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: true,
-      breakpoints: {
-        '@0.00': {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        '@0.75': {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        '@1.00': {
-          slidesPerView: 4,
-          spaceBetween: 20,
-        },
-        '@1.50': {
-          slidesPerView: 5,
-          spaceBetween: 10,
-        },
+  var swiper = new Swiper('.swiper-container-2', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    breakpoints: {
+      '@0.00': {
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
-      // navigation: {
-      //   nextEl: '.swiper-button-next2',
-      //   prevEl: '.swiper-button-prev2',
-      // },
-    });
+      '@0.75': {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      '@1.00': {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      '@1.50': {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+    },
+    // navigation: {
+    //   nextEl: '.swiper-button-next2',
+    //   prevEl: '.swiper-button-prev2',
+    // },
+  });
 
-    var swiper = new Swiper('.swiper-container-3', {
-      slidesPerView: 1,
-      spaceBetween: 10,
-      loop: true,
-      breakpoints: {
-        '@0.00': {
-          slidesPerView: 2,
-          spaceBetween: 10,
-        },
-        '@0.75': {
-          slidesPerView: 3,
-          spaceBetween: 20,
-        },
-        '@1.00': {
-          slidesPerView: 4,
-          spaceBetween: 20,
-        },
-        '@1.50': {
-          slidesPerView: 5,
-          spaceBetween: 10,
-        },
+  var swiper = new Swiper('.swiper-container-3', {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    breakpoints: {
+      '@0.00': {
+        slidesPerView: 2,
+        spaceBetween: 10,
       },
-      // navigation: {
-      //   nextEl: '.swiper-button-next-3',
-      //   prevEl: '.swiper-button-prev-3',
-      // },
-    });
+      '@0.75': {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      '@1.00': {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+      '@1.50': {
+        slidesPerView: 5,
+        spaceBetween: 10,
+      },
+    },
+    // navigation: {
+    //   nextEl: '.swiper-button-next-3',
+    //   prevEl: '.swiper-button-prev-3',
+    // },
+  });
 
-    var swiper = new Swiper('.testimonail', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      loop: true,
-      pagination: {
-        el: '.testimonail-swiper-pagination'
-      },
-      navigation: {
-        nextEl: '.testimonail-swiper-button-next',
-        prevEl: '.testimonail-swiper-button-prev',
-      },
-    });
+  var swiper = new Swiper('.testimonail', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    loop: true,
+    pagination: {
+      el: '.testimonail-swiper-pagination'
+    },
+    navigation: {
+      nextEl: '.testimonail-swiper-button-next',
+      prevEl: '.testimonail-swiper-button-prev',
+    },
+  });
   </script>
 </body>
 
