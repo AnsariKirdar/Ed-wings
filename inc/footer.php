@@ -159,15 +159,11 @@
           Company Info
         </p>
         <p class="mb-0">
-          <a href="#" target="_blank" class="text-white small font-weight-bold">
+          <a href="./about-us.php" target="_blank" class="text-white small font-weight-bold">
             <i class="fas fa-caret-right"></i> About Ed-wings
           </a>
         </p>
-        <p class="mb-0">
-          <a href="#" target="_blank" class="text-white small font-weight-bold">
-            <i class="fas fa-caret-right"></i> Franchisee
-          </a>
-        </p>
+
         <p class="mb-0">
           <a href="./agents/register.php" target="_blank" class="text-white small font-weight-bold">
             <i class="fas fa-caret-right"></i> Become an Affiliate

@@ -559,12 +559,12 @@
               <div class="tab-pane fade" id="view_itinerary_setting" role="tabpanel"
                    aria-labelledby="view_itinerary_setting-tab">
                 <div class="row">
-                  <div class="col-3">
+                  <!-- <div class="col-3">
                     <div class="bg-white h-100 p-3 px-4" style="border-radius: 13px;">
                       hiiih
                     </div>
-                  </div>
-                  <div class="col-9">
+                  </div> -->
+                  <div class="col-12">
                     <div class="row">
                       <?php
                       $result = mysqli_query($conn, "SELECT * FROM `itinerary` ORDER BY `itinerary`.`c_date` DESC");

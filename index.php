@@ -222,9 +222,9 @@
         <a href="itinerary.php?q=' . $id . '" class="btn btn btn-danger w-100 mx-1 rounded-pill font-weight-bold" target="_blank">
           More Detail\'s
         </a>
-        <button class="btn btn btn-danger w-100 rounded-pill mx-1 font-weight-bold">
+        <a href="./book.php" target="_blank" class="btn btn btn-danger w-100 rounded-pill mx-1 font-weight-bold">
           Buy Now
-        </button>
+        </a>
       </p>
     </div>
   </div>

@@ -8,29 +8,29 @@
   <?php include './inc/inc.php';
   include './../../dbh/conn.php'; ?>
   <style>
-    .rounded-left-pill {
-      border-radius: 52rem 0 0 52rem;
-    }
+  .rounded-left-pill {
+    border-radius: 52rem 0 0 52rem;
+  }
 
-    .rounded-right-pill {
-      border-radius: 0 52rem 52rem 0;
-    }
+  .rounded-right-pill {
+    border-radius: 0 52rem 52rem 0;
+  }
 
-    .nav {
-      background-color: #fff;
-      padding: 10px 20px;
-      border-radius: 13px;
-    }
+  .nav {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 13px;
+  }
 
-    .nav-pills .nav-link {
-      font-weight: bold;
-      color: var(--danger);
-    }
+  .nav-pills .nav-link {
+    font-weight: bold;
+    color: var(--danger);
+  }
 
-    .nav-pills .nav-link.active {
-      background-color: var(--danger);
-      font-weight: bold;
-    }
+  .nav-pills .nav-link.active {
+    background-color: var(--danger);
+    font-weight: bold;
+  }
   </style>
 </head>
 
@@ -41,7 +41,85 @@
       <div class="bg-light rounded p-3 h-100">
         <?php include './../../dbh/msg.php'; ?>
 
-        hi
+        <div class="row m-0 p-0">
+          <div class="col-lg-4 col-md-4 col-sm-16 my-3 mx-auto">
+            <div class="bg-white border border-danger p-3 text-center text-danger h-100"
+                 style="border-radius:15px; border-width:3px;">
+              <p class="mb-0 h3">
+                Admin :
+                <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `login` WHERE `type` = 'admin'")) ?>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-16 my-3 mx-auto">
+            <div class="bg-white border border-danger p-3 text-center text-danger h-100"
+                 style="border-radius:15px; border-width:3px;">
+              <p class="mb-0 h3">
+                Agent :
+                <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `login` WHERE `type` = 'agent'")) ?>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-16 my-3 mx-auto">
+            <div class="bg-white border border-danger p-3 text-center text-danger h-100"
+                 style="border-radius:15px; border-width:3px;">
+              <p class="mb-0 h3">
+                Customer :
+                <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `login` WHERE `type` = 'customer'")) ?>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-16 my-3 mx-auto">
+            <div class="bg-white border border-danger p-3 text-center text-danger h-100"
+                 style="border-radius:15px; border-width:3px;">
+              <p class="mb-0 h3">
+                Continent : <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `continent`")) ?>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-16 my-3 mx-auto">
+            <div class="bg-white border border-danger p-3 text-center text-danger h-100"
+                 style="border-radius:15px; border-width:3px;">
+              <p class="mb-0 h3">
+                Country : <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `country`")) ?>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-16 my-3 mx-auto">
+            <div class="bg-white border border-danger p-3 text-center text-danger h-100"
+                 style="border-radius:15px; border-width:3px;">
+              <p class="mb-0 h3">
+                Itinerary : <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `itinerary`")) ?>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-16 my-3 mx-auto">
+            <div class="bg-white border border-danger p-3 text-center text-danger h-100"
+                 style="border-radius:15px; border-width:3px;">
+              <p class="mb-0 h3">
+                News Letter : <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `news_letter`")) ?>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-16 my-3 mx-auto">
+            <div class="bg-white border border-danger p-3 text-center text-danger h-100"
+                 style="border-radius:15px; border-width:3px;">
+              <p class="mb-0 h3">
+                Office : <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `office`")) ?>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-16 my-3 mx-auto">
+            <div class="bg-white border border-danger p-3 text-center text-danger h-100"
+                 style="border-radius:15px; border-width:3px;">
+              <p class="mb-0 h3">
+                Packages : <?php echo mysqli_num_rows(mysqli_query($conn, "SELECT * FROM `packages`")) ?>
+              </p>
+            </div>
+          </div>
+
+
+        </div>
 
         <hr class="mb-1">
         <hr class="my-0 mb-3">
@@ -499,11 +577,14 @@
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
 </body>
 

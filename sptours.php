@@ -38,8 +38,7 @@ body {
 
           <?php
           include './dbh/conn.php';
-          $s = $_GET['s'];
-          $sql = "SELECT * FROM `itinerary` WHERE `title` LIKE '%$s%' OR `continents`  LIKE '%$s%' OR `country`  LIKE '%$s%' OR `description` = '$s' OR `tags` LIKE '%$s%'";
+          $sql = "SELECT * FROM `itinerary`";
           // echo $sql;
           $result = mysqli_query($conn, $sql);
           if (mysqli_num_rows($result)) {

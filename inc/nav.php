@@ -26,7 +26,7 @@
            <a class="nav-link text-danger" href="./gallery.php">Gallery</a>
          </li>
          <li class="nav-item active">
-           <a class="nav-link text-danger" href="#">Special Tours</a>
+           <a class="nav-link text-danger" href="./sptours.php">Special Tours</a>
          </li>
 
          <li class="nav-item active">

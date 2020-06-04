@@ -7,32 +7,32 @@
   <!-- meta tags -->
   <?php include './inc/head-links.php'; ?>
   <style>
-    .banner {
-      background-image: url(./img/bg/investor.jpg);
-      background-size: cover;
-    }
+  .banner {
+    background-image: url(./img/bg/investor.jpg);
+    background-size: cover;
+  }
 
-    .banner h1 {
-      font-size: 60px;
-      text-align: center;
-      font-weight: bolder;
-    }
+  .banner h1 {
+    font-size: 60px;
+    text-align: center;
+    font-weight: bolder;
+  }
 
-    .icon_box {
-      width: 60px;
-      height: 60px;
-      background-color: var(--danger);
-      padding: 20px;
-      border-radius: 60px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .icon_box {
+    width: 60px;
+    height: 60px;
+    background-color: var(--danger);
+    padding: 20px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    .icon_box i {
-      font-size: 30px;
-      color: #fff;
-    }
+  .icon_box i {
+    font-size: 30px;
+    color: #fff;
+  }
   </style>
 </head>
 
@@ -228,7 +228,9 @@
                 <b>Prospectus</b>
               </h4>
               <p class="text-right text-primary px-3">
-                <i class="fas fa-download"></i>
+                <a href="./doc/e_brochure.pdf" download="">
+                  <i class="fas fa-download"></i>
+                </a>
               </p>
             </div>
           </div>
@@ -239,7 +241,9 @@
                 <b>Financial Events</b>
               </h4>
               <p class="text-right text-primary px-3">
-                <i class="fas fa-download"></i>
+                <a href="./doc/e_brochure.pdf" download="">
+                  <i class="fas fa-download"></i>
+                </a>
               </p>
             </div>
           </div>
@@ -250,7 +254,9 @@
                 <b>Investor Presentation</b>
               </h4>
               <p class="text-right text-primary px-3">
-                <i class="fas fa-download"></i>
+                <a href="./doc/e_brochure.pdf" download="">
+                  <i class="fas fa-download"></i>
+                </a>
               </p>
             </div>
           </div>
@@ -261,7 +267,9 @@
                 <b>Investing Benefits</b>
               </h4>
               <p class="text-right text-primary px-3">
-                <i class="fas fa-download"></i>
+                <a href="./doc/e_brochure.pdf" download="">
+                  <i class="fas fa-download"></i>
+                </a>
               </p>
             </div>
           </div>
@@ -272,17 +280,21 @@
                 <b>Portfolio</b>
               </h4>
               <p class="text-right text-primary px-3">
-                <i class="fas fa-download"></i>
+                <a href="./doc/e_brochure.pdf" download="">
+                  <i class="fas fa-download"></i>
+                </a>
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 col-sm-6 my-3">
             <div class="p-2 rounded-lg" id="why">
               <h4 class="text-danger font-weight-bold">
-                <b>Burshore</b>
+                <b>Brochure</b>
               </h4>
               <p class="text-right text-primary px-3">
-                <i class="fas fa-download"></i>
+                <a href="./doc/e_brochure.pdf" download="">
+                  <i class="fas fa-download"></i>
+                </a>
               </p>
             </div>
           </div>
@@ -293,7 +305,9 @@
 
           <div class="col-lg-6 col-md-6 col-sm-12 p-0 d-flex align-items-center">
             <div class="w-100">
-              <iframe id="introvideo" width="100%" height='' src="https://www.youtube.com/embed/MkslemY1FvY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe id="introvideo" width="100%" height='' src="https://www.youtube.com/embed/MkslemY1FvY"
+                      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
             </div>
           </div>
 
@@ -302,17 +316,15 @@
               Ed-wings
             </h1>
             <p class="small text-muted text-justify">
-              Chief Coordinator, Outbound Operations Head with over 20 years of experience in tour management functions,
-              with diverse operations, product development and marketing forte providing support to principals and
-              clients. <br>
-              Business development, acquisitions, destination promotions and team building. <br><br>
-
-              Extensive travel to 105 countries promoting tourist destinations across the world to visitors from India,
-              United States, Canada, United Kingdom, Australia, New Zealand, Singapore etc. managing sightseeing tours,
-              large scale meetings, conferences, events and catering. <br> <br>
-
-              Multilingual in English / Hindi / Malayalam / Marathi. <br>
-              Continents covered: Europe, Americas, Africa, Oceana & Asia <br>
+              Ed-wings introduces adventure travel that triggers each and every one of us. All our itineraries on the
+              portal is on par with all the regular sightseeing’s one expects with a flavour of adventure. We use the
+              best hostels and lodges to ensure that you are well rested and who are not looking to spend on branded
+              chains. <br> <br>
+              For our uber luxury clients we offer customized travel to suit your pocket and style your itinerary to
+              your taste. <br>
+              We would also be offering ad-hoc exclusive group departures for some destinations time to time. <br>
+              To our friends who love watching live music concerts and Sports matches, we would design an itinerary
+              around your event so that you can enjoy the areas and countries making your dream trip memorable. <br>
 
             </p>
           </div>
@@ -320,7 +332,7 @@
 
 
         <h2 class="font-weight-bolder text-danger mt-5">
-          Presentating board Of directors
+          Ed-wings Team
         </h2>
         <hr>
 
@@ -346,6 +358,18 @@
               Lijy Anil Edwin (CEO)
             </h4>
             <p class="small text-justify">
+              A psychologist by profession, an avid reader and backpacker, loves her experiments with travel. Her quest
+              for travel reignited with her passion for minute detailing is a perfect niche, for knowing our guests and
+              their interest.
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-4 col-sm-12 p-0 px-3">
+            <img src="./img/profile/lijy_anil_edwin.jpg" alt="" class="w-100" style="border-radius: 15px;">
+            <h4 class="text-danger font-weight-bolder mt-2">
+              Tejeswini Helen (Operations)
+            </h4>
+            <p class="small text-justify">
               A mechanical and technical genius at Apotex Pharma, Canada, She has been adventure traveller and exploring
               places and experiences which stands unexplored. Her passion for travel and her operation experience adds a
               new flavour to our operations
@@ -367,19 +391,22 @@
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
   </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
   <script>
-    var windows_height = window.innerHeight;
-    var windows_width = window.innerWidth;
-    var body_height = windows_height;
-    document.getElementById('introvideo').style.height = document.getElementById('introvideo').clientWidth * .56 + "px";
+  var windows_height = window.innerHeight;
+  var windows_width = window.innerWidth;
+  var body_height = windows_height;
+  document.getElementById('introvideo').style.height = document.getElementById('introvideo').clientWidth * .56 + "px";
 
-    document.getElementById('banner').style.height = (body_height * .7) + "px";
+  document.getElementById('banner').style.height = (body_height * .7) + "px";
   </script>
 </body>
 

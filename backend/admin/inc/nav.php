@@ -34,9 +34,9 @@
          <li class="nav-item active">
            <a class="nav-link text-danger" href="./gallery.php">Gallery</a>
          </li>
-         <li class="nav-item active">
+         <!-- <li class="nav-item active">
            <a class="nav-link text-danger" href="#">Special Tours</a>
-         </li>
+         </li> -->
          <li class="nav-item active">
            <a class="nav-link text-danger" href="./mis.php">Mis</a>
          </li>
